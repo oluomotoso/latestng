@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: newsbook
+        psr4_prefix: newsbook
+        src_path: app
