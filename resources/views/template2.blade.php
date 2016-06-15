@@ -14,7 +14,7 @@
           content="LATESTNG.COM is the ➨ TOP Nigerian News Aggregation portal, providing comprehensive up-to-date NEWS coverage ➨ Breaking news ➨ Top news headlines from Nigeria, Africa and worldwide."/>
     <meta property="og:site_name" content="LATESTNG.COM"/>
     <meta name="keywords"
-          content="latest.com, latestng.com,latestng,latest, Punch, punchng, naij,Nigeria, Lagos, Abuja, Port Harcourt, breaking news in Nigeria, Boko Haram, PDP, ACN,Buhari, Goodluck Jonathan, Ebola, Quarantine, Adadevoh, Sawyer, First consultant, Shekau, Boko Haram, Chibok, Kunduga, Sambisa"/>
+          content="latest.com, latestng.com,latestng,latest, Punch, punchng, naij,Nigeria, Lagos, Abuja, Port Harcourt, breaking news in Nigeria, Boko Haram, PDP, ACN,Buhari, Goodluck Jonathan, Ebola, Quarantine, Adadevoh, Sawyer, First consultant, Shekau, Boko Haram, Chibok, Kunduga, Sambisa, tinubu, nigeria"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
