@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>{!!$content->feed_title!!}</title>
+    <meta name="description" content="{!!$content->feed_description!!}"/>
     <meta name="alexaVerifyID" content="0Ov3m5G5QodDMKNME8LjDX0N7Bs"/>
     <meta property="og:url" content="https://www.latestng.com/{!!$content->id!!}/{!!$content->perm_url!!}"/>
     <meta property="og:type" content="article"/>
@@ -54,6 +55,7 @@
         type="text/javascript">stLight.options({publisher: "c653dddc-e16d-453e-a904-8ab2756a1365", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
 </head>
 <body>
+
 <div id="fb-root"></div>
 <script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
