@@ -36,33 +36,33 @@
                 <ul class="nav hidden-xs" id="lg-menu">
                     <h4>Article Management</h4>
                     <li class="nav-divider"></li>
-                    <li><a href="create_post"><i class="glyphicon glyphicon-list-alt"></i> Create Post</a>
+                    <li><a href="{{url('admin/create_post')}}"><i class="glyphicon glyphicon-list-alt"></i> Create Post</a>
                     </li>
-                    <li><a href="edit_html"><i class="glyphicon glyphicon-list-alt"></i> Fetch Post</a>
+                    <li><a href="{{url('admin/edit_html')}}"><i class="glyphicon glyphicon-list-alt"></i> Fetch Post</a>
                     </li>
 
-                    <li><a href="manage_pending_post"><i class="glyphicon glyphicon-list"></i> Manage Pending Post</a></li>
-                    <li><a href="manage_published_post"><i class="glyphicon glyphicon-paperclip"></i> Manage Published Post</a></li>
-                    <li><a href="create_category"><i class="glyphicon glyphicon-arrow-right"></i> Create Category</a></li>
-                    <li><a href="check_edge_response"><i class="glyphicon glyphicon-arrow-right"></i>Manage Facebook Edge</a></li>
-                    <li><a href="manage-sources"><i class="glyphicon glyphicon-arrow-right"></i>Manage Sources</a></li>
+                    <li><a href="{{url('admin/manage_pending_post')}}"><i class="glyphicon glyphicon-list"></i> Manage Pending Post</a></li>
+                    <li><a href="{{url('admin/manage_published_post')}}"><i class="glyphicon glyphicon-paperclip"></i> Manage Published Post</a></li>
+                    <li><a href="{{url('admin/create_category')}}"><i class="glyphicon glyphicon-arrow-right"></i> Create Category</a></li>
+                    <li><a href="{{url('admin/check_edge_response')}}"><i class="glyphicon glyphicon-arrow-right"></i>Manage Facebook Edge</a></li>
+                    <li><a href="{{url('admin/manage-sources')}}"><i class="glyphicon glyphicon-arrow-right"></i>Manage Sources</a></li>
                     <h4>User Management</h4>
                     <li class="nav-divider"></li>
-                    <li><a href="add_user"><i class="glyphicon glyphicon-list-alt"></i> Add User</a>
+                    <li><a href="{{('admin/add_user')}}"><i class="glyphicon glyphicon-list-alt"></i> Add User</a>
                     </li>
-                    <li><a href="manage_users"><i class="glyphicon glyphicon-list"></i> Manage Users</a></li>
-                    <li><a href="add_user_role"><i class="glyphicon glyphicon-paperclip"></i> Manage User Roles</a></li>
+                    <li><a href="{{('admin/manage_users')}}"><i class="glyphicon glyphicon-list"></i> Manage Users</a></li>
+                    <li><a href="{{('admin/add_user_role')}}"><i class="glyphicon glyphicon-paperclip"></i> Manage User Roles</a></li>
                     <h4>Channels Management</h4>
                     <li class="nav-divider"></li>
-                    <li><a href="create_channel"><i class="glyphicon glyphicon-list-alt"></i>Create New Channel</a>
+                    <li><a href="{{('admin/create_channel')}}"><i class="glyphicon glyphicon-list-alt"></i>Create New Channel</a>
                     </li>
-                    <li><a href="manage_channels"><i class="glyphicon glyphicon-list"></i> Manage Channels</a></li>
+                    <li><a href="{{('admin/manage_channels')}}"><i class="glyphicon glyphicon-list"></i> Manage Channels</a></li>
                 </ul>
                 <!-- tiny only nav-->
                 <ul class="nav visible-xs" id="xs-menu">
-                    <li><a href="create_post" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
-                    <li><a href="manage_pending_post" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
-                    <li><a href="manage_published_post" class="text-center"><i class="glyphicon glyphicon-paperclip"></i></a></li>
+                    <li><a href="{{('admin/create_post')}}" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
+                    <li><a href="{{('admin/manage_pending_post')}}" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
+                    <li><a href="{{('admin/manage_published_post')}}" class="text-center"><i class="glyphicon glyphicon-paperclip"></i></a></li>
                 </ul>
 
             </div>
@@ -106,7 +106,7 @@
                                         class="glyphicon glyphicon-user"></i></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="">Settings</a></li>
-                                    <li><a href="../logout">Logout</a></li>
+                                    <li><a href="{{url('/logout')}}">Logout</a></li>
 
                                 </ul>
                             </li>
