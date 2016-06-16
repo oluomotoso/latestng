@@ -113,7 +113,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand logo">Latestng.com</a>
+            <a href="{{url('/')}}" class="navbar-brand logo">Latestng.com</a>
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
             <form class="navbar-form navbar-left">
@@ -128,7 +128,7 @@
             </form>
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a>
+                    <a href="{{url('/')}}"><i class="glyphicon glyphicon-home"></i> Home</a>
                 </li>
             </ul>
 

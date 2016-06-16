@@ -341,9 +341,19 @@ class admin_controller extends Controller
     public function PublishPendingPost(Request $request)
 
     {
-        try {
+
+        if(isset($request->publish_ids)){
             $data_ids = $request->publish_ids;
             $dataArray = explode(',', $data_ids);
+        }elseif(isset($request->id)){
+            $dataArray=$request->id;
+
+        }else{
+            return Redirect('admin/manage_pending_post')->with(['message' => 'No data sent']);
+        }
+        try {
+
+
             foreach ($dataArray as $id) {
                 $feed = pending_feed::find($id);
                 $fetch = new fetch();
