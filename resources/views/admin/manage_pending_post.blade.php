@@ -132,7 +132,7 @@
                     }
                 }
             ],
-            'order': [1, 'asc'],
+            'order': [4, 'desc'],
             'rowCallback': function (row, data, dataIndex) {
                 // Get row ID
                 var rowId = data[0];

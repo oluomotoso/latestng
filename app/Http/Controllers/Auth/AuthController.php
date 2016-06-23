@@ -2,11 +2,14 @@
 
 namespace newsbook\Http\Controllers\Auth;
 
+use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use newsbook\Http\Controllers\Controller;
 use newsbook\User;
 use Validator;
-use newsbook\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
@@ -36,7 +39,7 @@ class AuthController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -51,7 +54,7 @@ class AuthController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return User
      */
     protected function create(array $data)
@@ -61,5 +64,25 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function AutopostReg(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|confirmed|min:6'
+        ]);
+        $user = User::create([
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'role' => $request->role
+        ]);
+        Auth::attempt(['email' => $user->email, 'password' => $user->password]);
+        return redirect('/user/dashboard')->with('message', 'thanks for registering. please explore your account below');
+    }
+
+    public function GetCreateUser()
+    {
+        return view('autoposter.auth.register');
     }
 }
