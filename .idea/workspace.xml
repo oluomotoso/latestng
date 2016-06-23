@@ -70,19 +70,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/autoposter/user/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="51" selection-start="810" selection-end="810" vertical-scroll-proportion="0.86011904" vertical-offset="0" max-vertical-offset="595">
+            <state line="11" column="22" selection-start="386" selection-end="386" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="34" selection-start="8291" selection-end="8291" vertical-scroll-proportion="-9.230769" vertical-offset="3126" max-vertical-offset="3570">
+            <state line="150" column="6" selection-start="5751" selection-end="5751" vertical-scroll-proportion="0.9111748" vertical-offset="2232" max-vertical-offset="3570">
               <folding />
             </state>
           </provider>
@@ -178,11 +178,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/layouts/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/autoposter/autoposter.php" />
         <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/user/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
       </list>
     </option>
   </component>
@@ -718,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="34" selection-start="8291" selection-end="8291" vertical-scroll-proportion="-9.230769" vertical-offset="3126" max-vertical-offset="3570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/autoposter/autoposter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="43" selection-start="698" selection-end="698" vertical-scroll-proportion="-10.230769" vertical-offset="312" max-vertical-offset="782">
@@ -750,7 +743,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/autoposter/user/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="51" selection-start="810" selection-end="810" vertical-scroll-proportion="0.86011904" vertical-offset="0" max-vertical-offset="595">
+        <state line="11" column="22" selection-start="386" selection-end="386" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="6" selection-start="5751" selection-end="5751" vertical-scroll-proportion="0.9111748" vertical-offset="2232" max-vertical-offset="3570">
           <folding />
         </state>
       </provider>
