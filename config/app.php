@@ -139,6 +139,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
         Slynova\Commentable\ServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -196,6 +197,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Datatables' => yajra\Datatables\Datatables::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

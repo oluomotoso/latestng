@@ -24,8 +24,8 @@ Route::group(['domain' => 'news.latestng.com'], function () {
     Route::get('logout', 'Auth\AuthController@getLogout');
     Route::get('autopost_to_facebook', 'facebook_controller@PostToFacebookEdge');
     Route::get('/{id}/{title?}', 'content_controller@DisplayFullNewsContent')->name('articles.show');
-    Route::post('{id}/comments','content_controller@PostComment')->name('articles.comment');
-    Route::post('comments/{id}/reply','content_controller@PostCommentReply')->name('comments.reply');
+    Route::post('{id}/comments', 'content_controller@PostComment')->name('articles.comment');
+    Route::post('comments/{id}/reply', 'content_controller@PostCommentReply')->name('comments.reply');
     Route::get('us/{id}/{title?}', 'content_controller@DisplayFullNewsContent');
     Route::get('ng/{id}/{title?}', 'content_controller@DisplayFullNewsContent');
     Route::get('feeds.php', 'content_controller@RedirectOldestRoute');
@@ -56,7 +56,13 @@ Route::group(['domain' => 'news.latestng.com'], function () {
     });
 
 });
-
+Route::group(['domain' => 'autopost'], function () {
+    Route::get('/', 'Auth\AuthController@GetCreateUser');
+    Route::post('/register', 'Auth\AuthController@AutopostReg');
+    Route::get('/dashboard', 'autoposter\autoposter@Dashboard');
+    Route::get('add-facebook', 'autoposter\autoposter@redirectToProvider');
+    Route::get('add-facebook/callback', 'autoposter\autoposter@handleProviderCallback');
+});
 Route::get('/content', 'content_controller@ViewHomePageFeeds');
 Route::get('/', 'content_controller@ViewHomePage');
 Route::get('/new', 'content_controller@ViewHomePage');
@@ -249,8 +255,8 @@ Route::post('admin/approve_facebook_user',
 Route::get('facebook_login', 'facebook_controller@FacebookLogin');
 Route::get('facebook', 'facebook_controller@FacebookRedirectLogin');
 Route::get('/{id}/{title?}', 'content_controller@DisplayFullNewsContent')->name('articles.show');
-Route::post('{id}/comments','content_controller@PostComment')->name('articles.comment');
-Route::post('comments/{id}/reply','content_controller@PostCommentReply')->name('comments.reply');
+Route::post('{id}/comments', 'content_controller@PostComment')->name('articles.comment');
+Route::post('comments/{id}/reply', 'content_controller@PostCommentReply')->name('comments.reply');
 Route::get('us/{id}/{title?}', 'content_controller@DisplayFullNewsContent');
 Route::get('ng/{id}/{title?}', 'content_controller@DisplayFullNewsContent');
 Route::get('feeds.php', 'content_controller@RedirectOldestRoute');

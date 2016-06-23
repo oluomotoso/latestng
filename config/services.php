@@ -35,4 +35,10 @@ return [
         'secret' => '',
     ],
 
+    'facebook' => [
+        'client_id' => '709163979223052',
+        'client_secret' => 'ec61c85c45164ab9a5a605b81d1b4135',
+        'redirect' => 'http://autopost.latestng.com/add-facebook/callback',
+    ],
+
 ];

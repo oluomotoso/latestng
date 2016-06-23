@@ -264,7 +264,7 @@ class LatestngFacebook
             $to_post_content = $to_post[0];
             $linkData = [
                 'message' => $to_post_content->feed_description,
-                'link' => 'https://news.latestng.com/' . $to_post_content->id . '/' . $to_post_content->perm_url . ''
+                'link' => 'http://news.latestng.com/' . $to_post_content->id . '/' . $to_post_content->perm_url . ''
 
             ];
             $edgepage = facebook_account::find(1);
@@ -348,7 +348,7 @@ class LatestngFacebook
         $LinkId = $LinkId[1];
         $linkData = [
             'message' => $post[0]->feed_description,
-            'link' => 'https://news.latestng.com/' . $post[0]->id . '/' . $post[0]->perm_url . ''
+            'link' => 'http://news.latestng.com/' . $post[0]->id . '/' . $post[0]->perm_url . ''
 
         ];
         /* 'link' => 'https://www.facebook.com/latestng/posts/' . $LinkId . ''*/
@@ -464,7 +464,7 @@ class LatestngFacebook
             $to_post_content = $to_post[0];
             $linkData = [
                 'message' => $to_post_content->feed_title,
-                'link' => 'https://news.latestng.com/' . $to_post_content->id . '/' . $to_post_content->perm_url . ''
+                'link' => 'http://news.latestng.com/' . $to_post_content->id . '/' . $to_post_content->perm_url . ''
 
             ];
             $edgepage = facebook_account::find(1);
