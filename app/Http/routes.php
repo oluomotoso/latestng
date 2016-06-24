@@ -56,7 +56,7 @@ Route::group(['domain' => 'news.latestng.com'], function () {
     });
 
 });
-Route::group(['domain' => 'autopost'], function () {
+Route::group(['domain' => 'autopost.latestng.com'], function () {
     Route::get('/', 'Auth\AuthController@GetCreateUser');
     Route::post('/register', 'Auth\AuthController@AutopostReg');
     Route::get('/dashboard', 'autoposter\autoposter@Dashboard');

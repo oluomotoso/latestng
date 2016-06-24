@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="MySQL - latestng_com@188.166.45.192" uuid="ceebe541-20d2-4d50-847a-03d22224670d">
-    <database-info product="MySQL" version="5.5.47-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+  <data-source source="LOCAL" name="MySQL - latestng_com@localhost" uuid="ceebe541-20d2-4d50-847a-03d22224670d">
+    <database-info product="MySQL" version="5.6.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
-    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
     <schema name="" catalog="latestng_com"/>
+    <table name="autopost_subscribers" schema="" catalog="latestng_com" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="autopost_subscribers_user_id_foreign" columns="user_id" ref-table="users" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="autopost_subscribers_facebook_account" schema="" catalog="latestng_com" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="token" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="refresh_token" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="facebook_id" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="token_expiry" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="comments" schema="" catalog="latestng_com" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="body" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="parent_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="lft" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="rgt" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="depth" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="commentable_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="commentable_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="comments_commentable_id_index" unique="false" columns="commentable_id"/>
+      <index name="comments_commentable_type_index" unique="false" columns="commentable_type"/>
+      <index name="comments_user_id_index" unique="false" columns="user_id"/>
+    </table>
     <table name="content_categories" schema="" catalog="latestng_com" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="category" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
@@ -14,7 +52,6 @@
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="feed_category_ibfk_2" table="feed_category" schema="" catalog="latestng_com" columns="categories_id"/>
       <index name="category" unique="true" columns="category"/>
     </table>
     <table name="content_source" schema="" catalog="latestng_com" type="TABLE">
@@ -50,7 +87,6 @@
       <column name="availability" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MQ=="/>
       <column name="region_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MQ=="/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="facebook_edges_ibfk_1" table="facebook_edges" schema="" catalog="latestng_com" columns="facebook_account_owner"/>
       <index name="facebook_id" unique="true" columns="facebook_id"/>
     </table>
     <table name="facebook_edges" schema="" catalog="latestng_com" type="TABLE">
@@ -63,7 +99,6 @@
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
       <column name="response" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="facebook_edges_ibfk_1" columns="facebook_account_owner" ref-table="facebook_accounts" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="facebook_id" unique="true" columns="facebook_id"/>
     </table>
     <table name="facebook_links" schema="" catalog="latestng_com" type="TABLE">
@@ -81,15 +116,7 @@
       <column name="news_feed_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="categories_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="feed_category_ibfk_1" columns="news_feed_id" ref-table="news_feed" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="feed_category_ibfk_2" columns="categories_id" ref-table="content_categories" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="id" unique="true" columns="id"/>
-    </table>
-    <table name="images" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="source" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <column name="latestng" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="jobs_feed" schema="" catalog="latestng_com" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -145,7 +172,6 @@
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="FK_publish_approved" columns="approved_by" ref-table="users" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_publish_status" columns="publish_status" ref-table="publish_status" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="feed_category_ibfk_1" table="feed_category" schema="" catalog="latestng_com" columns="news_feed_id"/>
       <index name="feed_url" unique="true" columns="feed_url"/>
       <index name="FK_feed_source" unique="false" columns="content_source"/>
     </table>
@@ -220,6 +246,7 @@
       <column name="remember_token" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="FK_user_role" columns="role" ref-table="user_role" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="autopost_subscribers_user_id_foreign" table="autopost_subscribers" schema="" catalog="latestng_com" columns="user_id"/>
       <exported-key name="FK_source_created_by" table="content_source" schema="" catalog="latestng_com" columns="created_by"/>
       <exported-key name="FK_publish_approved" table="news_feed" schema="" catalog="latestng_com" columns="approved_by"/>
     </table>
