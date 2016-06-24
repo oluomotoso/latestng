@@ -7,7 +7,6 @@ use Slynova\Commentable\Traits\Commentable;
 
 class news_feed extends Model
 {
-    use Commentable;
     protected $table = 'news_feed';
     //
     protected $fillable = ['feed_title', 'feed_url', 'feed_category',

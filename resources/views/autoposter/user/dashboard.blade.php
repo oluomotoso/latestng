@@ -11,7 +11,7 @@
         <i class="text-center text-info">Please read and follow the information below:</i>
         <br>&nbsp;<br>
         <ul>
-            <li>Click <a href="">HERE</a> to commence the linking process.</li>
+            <li>Click <a href="{{url('add-facebook')}}">HERE</a> to commence the linking process.</li>
             <li>Follow the instructions on the page.</li>
             <li>Wait till you get a mail from us that your account have been approved successfully.</li>
             <li>Login to the facebook account you want to link to approve a request from autopost.latestng.com</li>

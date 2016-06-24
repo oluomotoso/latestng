@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3927126209">
-    <data-source source="LOCAL" name="MySQL - latestng_com@188.166.45.192" uuid="ceebe541-20d2-4d50-847a-03d22224670d">
+  <component name="DataSourceManagerImpl" format="xml" hash="2967693650">
+    <data-source source="LOCAL" name="MySQL - latestng_com@localhost" uuid="ceebe541-20d2-4d50-847a-03d22224670d">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://188.166.45.192:3306/latestng_com</jdbc-url>
-      <user-name>oluomotoso</user-name>
-      <user-password>dfc5dfc5dfc4dfcbdfdedfc3dfc5dfc4df98df99df9adf9d</user-password>
+      <jdbc-url>jdbc:mysql://localhost:3306/latestng_com</jdbc-url>
+      <user-name>root</user-name>
       <schema-pattern>latestng_com.*</schema-pattern>
       <default-schemas>latestng_com.*</default-schemas>
       <driver-properties>

@@ -23,28 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <file leaf-file-name="subscribers.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/autopost_models/subscribers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="34" selection-start="2644" selection-end="2644" vertical-scroll-proportion="-2.0769231" vertical-offset="932" max-vertical-offset="4658">
+            <state line="11" column="38" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin_controller.php">
+      <file leaf-file-name="subscriber_facebook.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/autopost_models/subscriber_facebook.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="8" selection-start="1160" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="8126">
+            <state line="12" column="109" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="340">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/autoposter/auth/register.blade.php">
+      <file leaf-file-name="LatestngFacebook.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/latestng/LatestngFacebook.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="33" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="986">
+            <state line="279" column="16" selection-start="9936" selection-end="9975" vertical-scroll-proportion="0.0" vertical-offset="4743" max-vertical-offset="9945">
               <folding />
             </state>
           </provider>
@@ -53,18 +53,18 @@
       <file leaf-file-name="autoposter.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/autoposter/autoposter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="43" selection-start="698" selection-end="698" vertical-scroll-proportion="-10.230769" vertical-offset="312" max-vertical-offset="782">
+            <state line="82" column="69" selection-start="2356" selection-end="2356" vertical-scroll-proportion="-12.038462" vertical-offset="1081" max-vertical-offset="1598">
               <folding>
-                <element signature="e#56#96#0" expanded="true" />
+                <element signature="e#56#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/autoposter/layouts/dashboard.blade.php">
+      <file leaf-file-name="facebook_welcome.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/autoposter/user/facebook_welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="105" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.0" vertical-offset="569" max-vertical-offset="2567">
+            <state line="8" column="48" selection-start="225" selection-end="225" vertical-scroll-proportion="0.38418078" vertical-offset="0" max-vertical-offset="354">
               <folding />
             </state>
           </provider>
@@ -73,16 +73,7 @@
       <file leaf-file-name="dashboard.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/autoposter/user/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="22" selection-start="386" selection-end="386" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="595">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="6" selection-start="5751" selection-end="5751" vertical-scroll-proportion="0.9111748" vertical-offset="2232" max-vertical-offset="3570">
+            <state line="26" column="6" selection-start="0" selection-end="1410" vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
@@ -91,32 +82,34 @@
       <file leaf-file-name="services.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/services.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="52" selection-start="1046" selection-end="1067" vertical-scroll-proportion="-10.884615" vertical-offset="397" max-vertical-offset="850">
+            <state line="38" column="39" selection-start="913" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="850">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_facebook_link.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/add_facebook_link.blade.php">
+      <file leaf-file-name="autoposter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/autoposter/autoposter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="0" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="578">
-              <folding>
-                <marker date="1451652236874" expanded="true" signature="50:155" placeholder="..." />
-                <marker date="1451652236874" expanded="true" signature="186:720" placeholder="..." />
-                <marker date="1451652236874" expanded="true" signature="249:713" placeholder="..." />
-                <marker date="1451652236874" expanded="true" signature="324:702" placeholder="..." />
-                <marker date="1451652236874" expanded="true" signature="351:542" placeholder="..." />
-                <marker date="1451652236874" expanded="true" signature="469:518" placeholder="..." />
-              </folding>
+            <state line="12" column="0" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard_datatables.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/autoposter/layouts/dashboard_datatables.blade.php">
+      <file leaf-file-name="2016_06_23_184315_create_autopost_subscribers_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_23_184315_create_autopost_subscribers_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="23" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="3026">
+            <state line="18" column="38" selection-start="493" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="663">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_06_23_184838_create_autopost_subscribers_facebook_account_table.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_23_184838_create_autopost_subscribers_facebook_account_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="22" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -132,12 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/js/card.js" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/FetchPost.php" />
-        <option value="$PROJECT_DIR$/public/css/facebook_modal.css" />
-        <option value="$PROJECT_DIR$/app/image.php" />
-        <option value="$PROJECT_DIR$/app/LocalImage.php" />
-        <option value="$PROJECT_DIR$/public/css/styles.css" />
         <option value="$PROJECT_DIR$/app/FeedCategory.php" />
         <option value="$PROJECT_DIR$/app/content_categories.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/facebookaccounts.blade.php" />
@@ -148,7 +135,6 @@
         <option value="$PROJECT_DIR$/app/Console/Commands/PostMetrics.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/FacebookGroupShare.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/news_feed.php" />
         <option value="$PROJECT_DIR$/public/css/card.css" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
         <option value="$PROJECT_DIR$/app/facebook_account.php" />
@@ -170,7 +156,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin_template.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/admin_template_with_data_tables.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/admin_controller.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/views/admin/manage_pending_post.blade.php" />
         <option value="$PROJECT_DIR$/app/latestng/LatestngFacebook.php" />
@@ -178,11 +163,19 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/layouts/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/autoposter/autoposter.php" />
         <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/user/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/admin_controller.php" />
+        <option value="$PROJECT_DIR$/app/models/User.php" />
+        <option value="$PROJECT_DIR$/app/news_feed.php" />
+        <option value="$PROJECT_DIR$/app/autopost_models/subscribers.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_06_23_184315_create_autopost_subscribers_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_06_23_184838_create_autopost_subscribers_facebook_account_table.php" />
+        <option value="$PROJECT_DIR$/app/autopost_models/subscriber_facebook.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/autoposter/autoposter.php" />
+        <option value="$PROJECT_DIR$/resources/views/autoposter/user/facebook_welcome.blade.php" />
       </list>
     </option>
   </component>
@@ -248,7 +241,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,59 +259,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="latestng.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www.latestng.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="latestng.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www.latestng.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="autoposter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="latestng.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www.latestng.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autoposter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="latestng.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www.latestng.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,11 +337,11 @@
       <recent name="C:\wamp\www\www.latestng.com\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\www.latestng.com\app\models" />
       <recent name="C:\wamp\www\www.latestng.com\public\css" />
       <recent name="C:\wamp\www\latestng.com\app\Http\Controllers\autofetch" />
       <recent name="C:\wamp\www\latestng.com\public\img" />
       <recent name="C:\wamp\www\latestng.com\public\css\images" />
-      <recent name="C:\wamp\www\latestng.com\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -423,26 +416,26 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24659865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24319728" sideWeight="0.6095166" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20238096" sideWeight="0.6095166" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16012084" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16012084" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11858006" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24018127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12009063" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25151056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23979592" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24659865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34013605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34013605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -464,46 +457,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/images/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/create_category.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="0" selection-end="779" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="561" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/create_channel.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="5" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="646" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/create_post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="8" selection-start="0" selection-end="1906" vertical-scroll-proportion="0.0" vertical-offset="529" max-vertical-offset="952" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/content_source.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="127" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="340" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/latestng/latestng.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="52" selection-start="8142" selection-end="8142" vertical-scroll-proportion="0.0" vertical-offset="3553" max-vertical-offset="4131" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/latestng.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="21" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2312" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/content_source.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="13" selection-start="2035" selection-end="2035" vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="1173" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/content_controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="146" column="9" selection-start="4341" selection-end="4341" vertical-scroll-proportion="0.0" vertical-offset="2482" max-vertical-offset="7038" />
@@ -617,16 +570,6 @@
         <state line="134" column="30" selection-start="4905" selection-end="4905" vertical-scroll-proportion="0.0" vertical-offset="1940" max-vertical-offset="3893" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/latestng/LatestngFacebook.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="431" column="23" selection-start="17019" selection-end="17019" vertical-scroll-proportion="-16.26923" vertical-offset="6666" max-vertical-offset="9571" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/autoposter/autoposter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="145" selection-end="145" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="238" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="0" selection-end="1206" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="697" />
@@ -664,93 +607,136 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/autoposter/layouts/template2.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="3931" selection-end="3931" vertical-scroll-proportion="0.0" vertical-offset="1329" max-vertical-offset="1632">
-          <folding />
-        </state>
+        <state line="87" column="0" selection-start="3931" selection-end="3931" vertical-scroll-proportion="0.0" vertical-offset="1329" max-vertical-offset="1632" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="21" selection-start="2163" selection-end="2163" vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1598">
-          <folding />
-        </state>
+        <state line="75" column="21" selection-start="2163" selection-end="2163" vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1598" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/autoposter/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="33" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="986">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="8" selection-start="1160" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="8126">
-          <folding />
-        </state>
+        <state line="25" column="33" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="986" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/autoposter/layouts/dashboard_datatables.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="3026">
-          <folding />
-        </state>
+        <state line="11" column="23" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="3026" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/add_facebook_link.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="0" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="578">
-          <folding>
-            <marker date="1451652236874" expanded="true" signature="50:155" placeholder="..." />
-            <marker date="1451652236874" expanded="true" signature="186:720" placeholder="..." />
-            <marker date="1451652236874" expanded="true" signature="249:713" placeholder="..." />
-            <marker date="1451652236874" expanded="true" signature="324:702" placeholder="..." />
-            <marker date="1451652236874" expanded="true" signature="351:542" placeholder="..." />
-            <marker date="1451652236874" expanded="true" signature="469:518" placeholder="..." />
-          </folding>
-        </state>
+        <state line="16" column="0" selection-start="0" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="578" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/autoposter/layouts/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="105" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.0" vertical-offset="569" max-vertical-offset="2567">
+        <state line="41" column="105" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.0" vertical-offset="569" max-vertical-offset="2567" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="199" column="8" selection-start="8325" selection-end="8383" vertical-scroll-proportion="-9.884615" vertical-offset="3126" max-vertical-offset="3570" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="35" selection-start="2769" selection-end="2769" vertical-scroll-proportion="0.0" vertical-offset="679" max-vertical-offset="4658" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="5" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="8126" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="27" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="697" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="356">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/autoposter/autoposter.php">
+    <entry file="file://$PROJECT_DIR$/app/news_feed.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="43" selection-start="698" selection-end="698" vertical-scroll-proportion="-10.230769" vertical-offset="312" max-vertical-offset="782">
-          <folding>
-            <element signature="e#56#96#0" expanded="true" />
-          </folding>
+        <state line="9" column="4" selection-start="149" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/autopost_models/subscribers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="38" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_23_184838_create_autopost_subscribers_facebook_account_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_23_184315_create_autopost_subscribers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="38" selection-start="493" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="663">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/services.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="52" selection-start="1046" selection-end="1067" vertical-scroll-proportion="-10.884615" vertical-offset="397" max-vertical-offset="850">
+        <state line="38" column="39" selection-start="913" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="850">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/latestng/LatestngFacebook.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="34" selection-start="2644" selection-end="2644" vertical-scroll-proportion="-2.0769231" vertical-offset="932" max-vertical-offset="4658">
+        <state line="279" column="16" selection-start="9936" selection-end="9975" vertical-scroll-proportion="0.0" vertical-offset="4743" max-vertical-offset="9945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/autopost_models/subscriber_facebook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="109" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/autoposter/autoposter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/autoposter/user/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="386" selection-end="386" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="595">
+        <state line="26" column="6" selection-start="0" selection-end="1410" vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="595">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/autoposter/autoposter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="6" selection-start="5751" selection-end="5751" vertical-scroll-proportion="0.9111748" vertical-offset="2232" max-vertical-offset="3570">
+        <state line="82" column="69" selection-start="2356" selection-end="2356" vertical-scroll-proportion="-12.038462" vertical-offset="1081" max-vertical-offset="1598">
+          <folding>
+            <element signature="e#56#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/autoposter/user/facebook_welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="48" selection-start="225" selection-end="225" vertical-scroll-proportion="0.38418078" vertical-offset="0" max-vertical-offset="354">
           <folding />
         </state>
       </provider>
