@@ -107,7 +107,7 @@ class admin_controller extends Controller
             'title' => $request->title,
             'title_param' => $request->title_param,
             'categories_param' => $request->categories_param,
-            'status'=>$request->value
+            'status' => $request->value
         ]);
 
         return redirect('admin/manage-sources')->with('message', 'content source updated successfully');
@@ -276,7 +276,7 @@ class admin_controller extends Controller
         $category = $request->category;
 
         $fetch->UpdateCategory($category, $new->id, $feed->feed_title);
-
+        $fetch->UpdateTag($feed->feed_title, $content, $new->id);
 
         pending_feed::where('id', $request->feed_id)->update([
             'publish_status' => 1
@@ -342,13 +342,13 @@ class admin_controller extends Controller
 
     {
 
-        if(isset($request->publish_ids)){
+        if (isset($request->publish_ids)) {
             $data_ids = $request->publish_ids;
             $dataArray = explode(',', $data_ids);
-        }elseif(isset($request->id)){
-            $dataArray=$request->id;
+        } elseif (isset($request->id)) {
+            $dataArray = $request->id;
 
-        }else{
+        } else {
             return Redirect('admin/manage_pending_post')->with(['message' => 'No data sent']);
         }
         try {
@@ -409,7 +409,7 @@ class admin_controller extends Controller
                 $category = $feed->feed_category;
                 $category_arr = explode(',', $category);
                 $fetch->UpdateCategory($category_arr, $new->id, $feed->feed_title);
-
+                $fetch->UpdateTag($feed->feed_title, $content, $new->id);
 
                 pending_feed::where('id', $id)->update([
                     'publish_status' => 1

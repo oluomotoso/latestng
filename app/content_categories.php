@@ -13,6 +13,7 @@ class content_categories extends Model
 
     public function Category()
     {
-    return $this->belongsTo('newsbook\FeedCategory');
+    return $this->hasMany('newsbook\FeedCategory','categories_id');
     }
+
 }

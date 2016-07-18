@@ -14,7 +14,7 @@ class CreateAutopostSubscribersFacebookAccountTable extends Migration
     {
         Schema::create('autopost_subscribers_facebook_account', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('subscriber_id');
+            $table->integer('subscriber_id')->unsigned();
             $table->string('name')->nullable();
             $table->string('token')->nullable();
             $table->string('refresh_token')->nullable();

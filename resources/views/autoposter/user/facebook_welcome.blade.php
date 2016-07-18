@@ -6,8 +6,11 @@
     @endforeach
 </ul>
 <div>
-    <span>Welcome {{$facebook->name}}</span><br>
-    CLICK <b><a href="">HERE</a></b> to continue
+    <br>
+    <span>Welcome {{$facebook[0]->name}}</span><br>
+    CLICK <b><a href="https://developers.facebook.com/requests/" target="_blank">HERE</a></b>on a new tab to accept the Autoposter request
+    <br>
+    <span>CLICK <a href="{{url('/add-facebook2')}}">HERE</a> TO FINISH</span>
 </div>
 
 

@@ -51,8 +51,7 @@
     </script>
     <script type="text/javascript">var switchTo5x = true;</script>
     <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-    <script
-        type="text/javascript">stLight.options({publisher: "c653dddc-e16d-453e-a904-8ab2756a1365", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+    <script type="text/javascript">stLight.options({publisher: "c653dddc-e16d-453e-a904-8ab2756a1365", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
 </head>
 <body>
 

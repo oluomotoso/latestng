@@ -61,7 +61,9 @@ Route::group(['domain' => 'autopost.latestng.com'], function () {
     Route::post('/register', 'Auth\AuthController@AutopostReg');
     Route::get('/dashboard', 'autoposter\autoposter@Dashboard');
     Route::get('add-facebook', 'autoposter\autoposter@redirectToProvider');
+    Route::get('add-facebook2', 'autoposter\autoposter@redirectToFacebook2');
     Route::get('add-facebook/callback', 'autoposter\autoposter@handleProviderCallback');
+
 });
 Route::get('/content', 'content_controller@ViewHomePageFeeds');
 Route::get('/', 'content_controller@ViewHomePage');
@@ -252,6 +254,10 @@ Route::post('admin/approve_facebook_user',
     ['middleware' => 'auth',
         'uses' => 'admin_controller@ApproveFacebookUser'
     ]);
+Route::group(['prefix' => 'category'], function () {
+
+    Route::get('/{category}', 'content_controller@DisplayCategory');
+});
 Route::get('facebook_login', 'facebook_controller@FacebookLogin');
 Route::get('facebook', 'facebook_controller@FacebookRedirectLogin');
 Route::get('/{id}/{title?}', 'content_controller@DisplayFullNewsContent')->name('articles.show');

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Latestng.com-Breaking News in Nigeria, News Headlines in Nigeria, Africa and Worldwide</title>
     <meta property="fb:app_id" content="1397993927197661"/>
+    <meta property="fb:pages" content="1450381468590171" />
     <meta name="alexaVerifyID" content="0Ov3m5G5QodDMKNME8LjDX0N7Bs"/>
-    <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title"
           content="Latestng.com-Breaking News in Nigeria, News Headlines in Nigeria, Africa and Worldwide"/>
