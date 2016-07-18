@@ -23,93 +23,90 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="subscribers.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/autopost_models/subscribers.php">
+      <file leaf-file-name="homepage.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/front/homepage.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="38" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323">
+            <state line="594" column="0" selection-start="26739" selection-end="26767" vertical-scroll-proportion="-4.576923" vertical-offset="9979" max-vertical-offset="10744">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="subscriber_facebook.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/autopost_models/subscriber_facebook.php">
+      <file leaf-file-name="mobilemenu.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/front/mobilemenu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="109" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="340">
+            <state line="32" column="11" selection-start="826" selection-end="826" vertical-scroll-proportion="-3.9230769" vertical-offset="442" max-vertical-offset="884">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LatestngFacebook.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/latestng/LatestngFacebook.php">
+      <file leaf-file-name="content_controller.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/content_controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="279" column="16" selection-start="9936" selection-end="9975" vertical-scroll-proportion="0.0" vertical-offset="4743" max-vertical-offset="9945">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autoposter.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/autoposter/autoposter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="69" selection-start="2356" selection-end="2356" vertical-scroll-proportion="-12.038462" vertical-offset="1081" max-vertical-offset="1598">
+            <state line="223" column="59" selection-start="10252" selection-end="10252" vertical-scroll-proportion="-2.0784314" vertical-offset="3685" max-vertical-offset="8432">
               <folding>
-                <element signature="e#56#78#0" expanded="true" />
+                <element signature="e#47#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebook_welcome.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/autoposter/user/facebook_welcome.blade.php">
+      <file leaf-file-name="tagged.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tagged.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="48" selection-start="225" selection-end="225" vertical-scroll-proportion="0.38418078" vertical-offset="0" max-vertical-offset="354">
+            <state line="20" column="63" selection-start="425" selection-end="425" vertical-scroll-proportion="-9.884615" vertical-offset="83" max-vertical-offset="493">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/autoposter/user/dashboard.blade.php">
+      <file leaf-file-name="content.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/content.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="6" selection-start="0" selection-end="1410" vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="595">
+            <state line="198" column="4" selection-start="7727" selection-end="8985" vertical-scroll-proportion="129.0" vertical-offset="6720" max-vertical-offset="7259">
+              <folding>
+                <element signature="n#style#0;n#ins#0;n#div#2;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/front/content.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="490" column="28" selection-start="19613" selection-end="19613" vertical-scroll-proportion="-9.038462" vertical-offset="8095" max-vertical-offset="9010">
+              <folding>
+                <element signature="n#style#0;n#ins#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ins#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ins#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/front/header.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="264" column="60" selection-start="11266" selection-end="11266" vertical-scroll-proportion="-0.65384614" vertical-offset="4471" max-vertical-offset="5423">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/services.php">
+      <file leaf-file-name="news_feed.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/news_feed.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="39" selection-start="913" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="850">
+            <state line="27" column="4" selection-start="769" selection-end="870" vertical-scroll-proportion="-7.6538463" vertical-offset="243" max-vertical-offset="646">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autoposter.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/autoposter/autoposter.php">
+      <file leaf-file-name="category.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/front/category.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_06_23_184315_create_autopost_subscribers_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_23_184315_create_autopost_subscribers_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="38" selection-start="493" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="663">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_06_23_184838_create_autopost_subscribers_facebook_account_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_23_184838_create_autopost_subscribers_facebook_account_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="22" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="748">
+            <state line="296" column="28" selection-start="9655" selection-end="9655" vertical-scroll-proportion="0.36533332" vertical-offset="4895" max-vertical-offset="5678">
               <folding />
             </state>
           </provider>
@@ -125,31 +122,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/FeedCategory.php" />
-        <option value="$PROJECT_DIR$/app/content_categories.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/facebookaccounts.blade.php" />
-        <option value="$PROJECT_DIR$/app/latestng/facebook.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/facebook_controller.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/FacebookPageShare.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/edit_facebook_edge.blade.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/PostMetrics.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/FacebookGroupShare.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/public/css/card.css" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-        <option value="$PROJECT_DIR$/app/facebook_account.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DatatablesController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/create_channel.blade.php" />
-        <option value="$PROJECT_DIR$/app/content_source.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/content_source.blade.php" />
-        <option value="$PROJECT_DIR$/app/latestng/latestng.php" />
-        <option value="$PROJECT_DIR$/app/latestng/fetch.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/content_controller.php" />
-        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/fetch_controller.php" />
-        <option value="$PROJECT_DIR$/resources/views/content.blade.php" />
         <option value="$PROJECT_DIR$/public/.gitignore" />
-        <option value="$PROJECT_DIR$/resources/views/template2.blade.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/resources/views/template.blade.php" />
@@ -158,24 +131,48 @@
         <option value="$PROJECT_DIR$/resources/views/admin_template_with_data_tables.blade.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/views/admin/manage_pending_post.blade.php" />
-        <option value="$PROJECT_DIR$/app/latestng/LatestngFacebook.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/layouts/template2.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/layouts/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/config/services.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/user/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/admin_controller.php" />
         <option value="$PROJECT_DIR$/app/models/User.php" />
-        <option value="$PROJECT_DIR$/app/news_feed.php" />
         <option value="$PROJECT_DIR$/app/autopost_models/subscribers.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_06_23_184315_create_autopost_subscribers_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_06_23_184838_create_autopost_subscribers_facebook_account_table.php" />
         <option value="$PROJECT_DIR$/app/autopost_models/subscriber_facebook.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_06_23_184838_create_autopost_subscribers_facebook_account_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/autoposter/autoposter.php" />
         <option value="$PROJECT_DIR$/resources/views/autoposter/user/facebook_welcome.blade.php" />
+        <option value="$PROJECT_DIR$/app/latestng/LatestngFacebook.php" />
+        <option value="$PROJECT_DIR$/public/front/css/style.min.css" />
+        <option value="$PROJECT_DIR$/public/front/fixed_left.html" />
+        <option value="$PROJECT_DIR$/resources/views/template2.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/category.blade.php" />
+        <option value="$PROJECT_DIR$/app/content_categories.php" />
+        <option value="$PROJECT_DIR$/app/FeedCategory.php" />
+        <option value="$PROJECT_DIR$/public/css/style.min.css" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_07_17_125729_create-tags-table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/admin_controller.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_07_17_133033_add-have_tag-to-newsfeed.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_07_17_125801_create-tagged-table.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/UpdateTags.php" />
+        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/app/latestng/keyword-generator/common-words-en_GB.php" />
+        <option value="$PROJECT_DIR$/app/latestng/keyword-generator/class.colossal-mind-mb-keyword-generator.php" />
+        <option value="$PROJECT_DIR$/resources/views/content.blade.php" />
+        <option value="$PROJECT_DIR$/app/tagged.php" />
+        <option value="$PROJECT_DIR$/app/tag.php" />
+        <option value="$PROJECT_DIR$/app/news_feed.php" />
+        <option value="$PROJECT_DIR$/app/latestng/fetch.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/content_controller.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/mobilemenu.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/homepage.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/content.blade.php" />
       </list>
     </option>
   </component>
@@ -212,7 +209,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,11 +263,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="autoposter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
+              <option name="myItemId" value="front" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,14 +280,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="autoposter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -307,12 +291,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,11 +315,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\www.latestng.com\app\latestng" />
+      <recent name="C:\wamp\www\www.latestng.com\resources\views\front" />
+      <recent name="C:\wamp\www\www.latestng.com\public\js" />
+      <recent name="C:\wamp\www\www.latestng.com\public\css" />
       <recent name="C:\wamp\www\www.latestng.com\resources\views\autoposter\layouts" />
-      <recent name="C:\wamp\www\www.latestng.com\public" />
-      <recent name="C:\wamp\www\www.latestng.com\resources\views\admin" />
-      <recent name="C:\wamp\www\www.latestng.com\resources\views" />
-      <recent name="C:\wamp\www\www.latestng.com\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\www.latestng.com\app\models" />
@@ -417,18 +402,18 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20238096" sideWeight="0.6095166" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18305084" sideWeight="0.6095166" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16012084" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17371601" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12009063" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25151056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30438066" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23979592" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24659865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24659865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -453,290 +438,246 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/content_controller.php">
+    <entry file="file://$PROJECT_DIR$/public/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="9" selection-start="4341" selection-end="4341" vertical-scroll-proportion="0.0" vertical-offset="2482" max-vertical-offset="7038" />
+        <state line="90" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.33471075" vertical-offset="1368" max-vertical-offset="6273" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="5" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/FacebookGroupShare.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="18" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/FacebookPageShare.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="65" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="901" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/latestng/fetch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="225" selection-start="2337" selection-end="2337" vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="6528" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="41" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="1156" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="377" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/latestng_com.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="4462" max-vertical-offset="4862" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/content.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="68" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0" vertical-offset="1292" max-vertical-offset="7276" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/fetch_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="440" column="0" selection-start="20427" selection-end="20427" vertical-scroll-proportion="0.0" vertical-offset="7480" max-vertical-offset="10455" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="37" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/template2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="310" selection-start="1247" selection-end="1247" vertical-scroll-proportion="-8.0" vertical-offset="64" max-vertical-offset="9639" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="27" selection-start="1663" selection-end="1669" vertical-scroll-proportion="-10.769231" vertical-offset="502" max-vertical-offset="1003" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/template.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="37" selection-start="6235" selection-end="6235" vertical-scroll-proportion="-85.0" vertical-offset="0" max-vertical-offset="2737" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin_template.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="21" selection-start="1939" selection-end="1939" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2822" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin_template_with_data_tables.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="30" selection-start="8419" selection-end="8419" vertical-scroll-proportion="0.0" vertical-offset="583" max-vertical-offset="3026" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/manage_published_post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="1802" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/edit_pending_post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="49" selection-start="2404" selection-end="2412" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1632" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="72590" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/PostMetrics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="5" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="901" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/manage_pending_post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="30" selection-start="4905" selection-end="4905" vertical-scroll-proportion="0.0" vertical-offset="1940" max-vertical-offset="3893" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="0" selection-end="1206" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="697" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="3" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/artisan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/autoposter/layouts/template2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="3931" selection-end="3931" vertical-scroll-proportion="0.0" vertical-offset="1329" max-vertical-offset="1632" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="21" selection-start="2163" selection-end="2163" vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1598" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/autoposter/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="33" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="986" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/autoposter/layouts/dashboard_datatables.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="3026" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/add_facebook_link.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="0" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="578" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/autoposter/layouts/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="105" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.0" vertical-offset="569" max-vertical-offset="2567" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="8" selection-start="8325" selection-end="8383" vertical-scroll-proportion="-9.884615" vertical-offset="3126" max-vertical-offset="3570" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="509">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="35" selection-start="2769" selection-end="2769" vertical-scroll-proportion="0.0" vertical-offset="679" max-vertical-offset="4658" />
+        <state line="256" column="35" selection-start="9416" selection-end="9424" vertical-scroll-proportion="-2.9803922" vertical-offset="4200" max-vertical-offset="4760" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/homepage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.497826" vertical-offset="1149" max-vertical-offset="3213" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="9" selection-start="8170" selection-end="8170" vertical-scroll-proportion="-17.692308" vertical-offset="2056" max-vertical-offset="2618" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/template.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="12" selection-start="2927" selection-end="3364" vertical-scroll-proportion="-3.5769231" vertical-offset="893" max-vertical-offset="2737" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/template2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="41" selection-start="7948" selection-end="7998" vertical-scroll-proportion="-12.038462" vertical-offset="2543" max-vertical-offset="9639" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="38214" selection-start="132400" selection-end="132400" vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/latestng/latestng.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="4012" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/latestng/keyword-generator/example-en_GB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="0" selection-start="4348" selection-end="6501" vertical-scroll-proportion="-21.538462" vertical-offset="307" max-vertical-offset="2023" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_17_125729_create-tags-table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="34" selection-start="372" selection-end="372" vertical-scroll-proportion="-4.4615383" vertical-offset="139" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin_controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="5" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="8126" />
+        <state line="408" column="49" selection-start="13037" selection-end="13037" vertical-scroll-proportion="-3.764706" vertical-offset="6744" max-vertical-offset="8126" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_23_184838_create_autopost_subscribers_facebook_account_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.3076923" vertical-offset="86" max-vertical-offset="731" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_23_184315_create_autopost_subscribers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="12" selection-start="467" selection-end="525" vertical-scroll-proportion="-10.115385" vertical-offset="26" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_17_133033_add-have_tag-to-newsfeed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="42" selection-start="624" selection-end="624" vertical-scroll-proportion="-13.0" vertical-offset="155" max-vertical-offset="663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_07_17_125801_create-tagged-table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="5" selection-start="714" selection-end="714" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/region.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="4" selection-start="102" selection-end="130" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="289" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/publish.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="373" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="27" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="697" />
+        <state line="26" column="4" selection-start="649" selection-end="712" vertical-scroll-proportion="-8.115385" vertical-offset="163" max-vertical-offset="629" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="45" selection-start="631" selection-end="631" vertical-scroll-proportion="-10.846154" vertical-offset="41" max-vertical-offset="765" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/FetchPost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="8" selection-start="758" selection-end="821" vertical-scroll-proportion="-8.5" vertical-offset="510" max-vertical-offset="918" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/comment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="356">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="434" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/UpdateTags.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="28" selection-start="266" selection-end="277" vertical-scroll-proportion="9.538462" vertical-offset="486" max-vertical-offset="901" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/PostMetrics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="10.807693" vertical-offset="281" max-vertical-offset="884" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/latestng/keyword-generator/class.colossal-mind-mb-keyword-generator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="9" selection-start="6857" selection-end="6857" vertical-scroll-proportion="-6.392157" vertical-offset="3193" max-vertical-offset="7565" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="374">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/content_categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="4" selection-start="204" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="33" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/latestng/keyword-generator/common-words-en_GB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="2209" selection-start="2518" selection-end="2520" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/FeedCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="265" selection-end="273" vertical-scroll-proportion="-6.8846154" vertical-offset="42" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/latestng/fetch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="474" column="37" selection-start="17997" selection-end="17997" vertical-scroll-proportion="-7.1538463" vertical-offset="7566" max-vertical-offset="8211">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tagged.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="63" selection-start="425" selection-end="425" vertical-scroll-proportion="-9.884615" vertical-offset="83" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/content_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="223" column="59" selection-start="10252" selection-end="10252" vertical-scroll-proportion="-2.0784314" vertical-offset="3685" max-vertical-offset="8432">
+          <folding>
+            <element signature="e#47#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/news_feed.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="149" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="493">
+        <state line="27" column="4" selection-start="769" selection-end="870" vertical-scroll-proportion="-7.6538463" vertical-offset="243" max-vertical-offset="646">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/autopost_models/subscribers.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/front/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323">
+        <state line="264" column="60" selection-start="11266" selection-end="11266" vertical-scroll-proportion="-0.65384614" vertical-offset="4471" max-vertical-offset="5423">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_23_184838_create_autopost_subscribers_facebook_account_table.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/front/mobilemenu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="22" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="748">
+        <state line="32" column="11" selection-start="826" selection-end="826" vertical-scroll-proportion="-3.9230769" vertical-offset="442" max-vertical-offset="884">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_23_184315_create_autopost_subscribers_table.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/front/homepage.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="38" selection-start="493" selection-end="525" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="663">
+        <state line="594" column="0" selection-start="26739" selection-end="26767" vertical-scroll-proportion="-4.576923" vertical-offset="9979" max-vertical-offset="10744">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/content.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="39" selection-start="913" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/latestng/LatestngFacebook.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="279" column="16" selection-start="9936" selection-end="9975" vertical-scroll-proportion="0.0" vertical-offset="4743" max-vertical-offset="9945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/autopost_models/subscriber_facebook.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="109" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/autoposter/autoposter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/autoposter/user/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="6" selection-start="0" selection-end="1410" vertical-scroll-proportion="-9.153846" vertical-offset="204" max-vertical-offset="595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/autoposter/autoposter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="69" selection-start="2356" selection-end="2356" vertical-scroll-proportion="-12.038462" vertical-offset="1081" max-vertical-offset="1598">
+        <state line="198" column="4" selection-start="7727" selection-end="8985" vertical-scroll-proportion="129.0" vertical-offset="6720" max-vertical-offset="7259">
           <folding>
-            <element signature="e#56#78#0" expanded="true" />
+            <element signature="n#style#0;n#ins#0;n#div#2;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/autoposter/user/facebook_welcome.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/front/content.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="48" selection-start="225" selection-end="225" vertical-scroll-proportion="0.38418078" vertical-offset="0" max-vertical-offset="354">
+        <state line="490" column="28" selection-start="19613" selection-end="19613" vertical-scroll-proportion="-9.038462" vertical-offset="8095" max-vertical-offset="9010">
+          <folding>
+            <element signature="n#style#0;n#ins#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ins#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ins#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/category.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="296" column="28" selection-start="9655" selection-end="9655" vertical-scroll-proportion="0.36533332" vertical-offset="4895" max-vertical-offset="5678">
           <folding />
         </state>
       </provider>

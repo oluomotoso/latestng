@@ -17,7 +17,9 @@ class Kernel extends ConsoleKernel
         \newsbook\Console\Commands\FetchPost::class,
         \newsbook\Console\Commands\FacebookPageShare::class,
         \newsbook\Console\Commands\PostMetrics::class,
-        \newsbook\Console\Commands\FacebookGroupShare::class
+        \newsbook\Console\Commands\FacebookGroupShare::class,
+        \newsbook\Console\Commands\UpdateTags::class
+
     ];
 
     /**

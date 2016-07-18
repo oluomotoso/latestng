@@ -8,8 +8,11 @@ use DB;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use League\Flysystem\Exception;
+use newsbook\content_categories;
+use newsbook\FeedCategory;
 use newsbook\Http\Requests;
 use newsbook\news_feed;
+use newsbook\tagged;
 use Slynova\Commentable\Models\Comment;
 
 
@@ -32,7 +35,7 @@ class content_controller extends Controller
         try {
             $request = new Request();
             DB::table('news_feed')->where('id', $id)->increment('read_counter');
-            $content = news_feed::with('feed_category')->find($id);
+            $content = news_feed::with('feed_category.Category', 'tagged.tags', 'editor')->find($id);
 
             if (isset($_GET['p'])) {
                 $page = $_GET['p'];
@@ -54,11 +57,36 @@ class content_controller extends Controller
             $mydate = strtotime($pub_time);
             $thedate = $this->human_time_diff($mydate);
             //$thedate = date('l jS \of F Y h:i A', $mydate);
-            $response->withCookie(cookie()->forever('visited', $value));
-            return view('content', ['response' => $response, 'content' => $content, 'new_content' => $newContent, 'pub_time' => $thedate, 'contents' => $this->Latest(), 'rising' => $this->RisingFeeds(), 'featured' => $this->FeaturedFeeds()]);
+            $response->withCookie(cookie()->forever('loftysms.com', $value));
+            $entertainment = FeedCategory::with('Newsfeed')->where('categories_id', 25)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+            $business = FeedCategory::with('Newsfeed')->where('categories_id', 6)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+            $politics = FeedCategory::with('Newsfeed')->where('categories_id', 1)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+            $health = FeedCategory::with('Newsfeed')->where('categories_id', 14)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+            $tech = FeedCategory::with('Newsfeed')->where('categories_id', 18)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+            $others = FeedCategory::with('Category')->whereNotIn('categories_id', [6, 14, 25])->SelectRaw('categories_id,COUNT(*) as count')->groupBy('categories_id')->distinct('categories_id')->orderBy('count', 'desc')->limit(10)->get();
+            $previous_id = news_feed::where('id', '<', $id)->max('id');;
+            $next_id = news_feed::where('id', '>', $id)->min('id');
+            $next = news_feed::find($next_id);
+            $previous = news_feed::find($previous_id);
+            $related = $this->RelatedPost($id);
+            $popular_cate = FeedCategory::with('Category')->SelectRaw('categories_id,COUNT(*) as count')->groupBy('categories_id')->distinct('categories_id')->orderBy('count', 'desc')->limit(10)->get();
+
+
+            return view('front.content', ['response' => $response, 'content' => $content, 'new_content' => $newContent, 'pub_time' => $thedate, 'latest' => $this->Latest(), 'trending' => $this->RisingFeeds(), 'popular' => $this->FeaturedFeeds(), 'entertainments' => $entertainment, 'business' => $business, 'health' => $health, 'techs' => $tech, 'politics' => $politics, 'others' => $others, 'next' => $next, 'previous' => $previous, 'related' => $related, 'categories' => $popular_cate]);
         } catch (Exception $ec) {
             $ec->getMessage();
         }
+    }
+
+    function RelatedPost($id)
+    {
+        $tags = tagged::where('news_feed_id', $id)->get();
+        $alltag = '';
+        foreach ($tags as $tag) {
+            $alltag .= $tag->id . ',';
+        }
+        $related = tagged::with('newsfeed.feed_category.Category')->whereIn('tags_id', [$alltag])->whereNotIn('news_feed_id', [$id])->orderBy('id', 'desc')->paginate(4);
+        return $related;
     }
 
     function formatCount($n, $singular, $plural, $none = '0')
@@ -72,7 +100,7 @@ class content_controller extends Controller
         }
     }
 
-    function human_time_diff($from, $to = '')
+    function human_time_diff($from)
     {
         if (empty($to))
             $to = time();
@@ -135,7 +163,10 @@ class content_controller extends Controller
         if (!empty($paras)) {
             $split = $paras[floor(sizeof($paras) / 2)];
         }
-        $content = substr($content, 0, $split) . '<div class="adv-widget">
+        $content = substr($content, 0, $split) . '<div class="mag-content clearfix">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ad728-wrapper">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- latestng -->
 <ins class="adsbygoogle"
@@ -145,32 +176,82 @@ class content_controller extends Controller
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+</div>
+        </div>
+    </div>
 </div>' . substr($content, $split);
         return $content;
     }
 
+    public function Entertainment()
+    {
+        return FeedCategory::with('Newsfeed')->where('categories_id', 25)->orWhere('categories_id', 9)->orWhere('categories_id', 12)->orWhere('categories_id', 27)->orWhere('categories_id', 31)->orWhere('categories_id', 32)->get();
+
+    }
+
+    public function DisplayCategory($category)
+    {
+        $category_id = content_categories::where('category', $category)->get();
+
+        $entertainment = FeedCategory::with('Newsfeed')->where('categories_id', 25)->orWhere('categories_id', 27)->orWhere('categories_id', 31)->orWhere('categories_id', 32)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $business = FeedCategory::with('Newsfeed')->where('categories_id', 6)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $politics = FeedCategory::with('Newsfeed')->where('categories_id', 1)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $health = FeedCategory::with('Newsfeed')->where('categories_id', 14)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $tech = FeedCategory::with('Newsfeed')->where('categories_id', 18)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $others = FeedCategory::with('Category')->whereNotIn('categories_id', [1, 6, 14, 18, 25])->SelectRaw('categories_id,COUNT(*) as count')->groupBy('categories_id')->distinct('categories_id')->orderBy('count', 'desc')->limit(10)->get();
+        $popular_cate = FeedCategory::with('Category')->SelectRaw('categories_id,COUNT(*) as count')->groupBy('categories_id')->distinct('categories_id')->orderBy('count', 'desc')->limit(10)->get();
+        $tags = explode(',', $category_id[0]->tags);
+        $tags = array_unique($tags);
+        $tags = array_filter($tags);
+        $tags = array_values($tags);
+        $contents = FeedCategory::with('Newsfeed')->where('categories_id', $category_id[0]->id)->distinct('news_feed_id')->orderBy('id', 'desc')->paginate(10);
+
+        return view('front.category', ['contents' => $contents, 'entertainments' => $entertainment, 'category' => $category_id, 'tags' => $tags, 'categories' => $popular_cate, 'business' => $business, 'health' => $health, 'techs' => $tech, 'politics' => $politics, 'others' => $others]);
+
+    }
+
     public function ViewHomePage()
     {
+        $entertainment = FeedCategory::with('Newsfeed')->where('categories_id', 25)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $business = FeedCategory::with('Newsfeed')->where('categories_id', 6)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $politics = FeedCategory::with('Newsfeed')->where('categories_id', 1)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $health = FeedCategory::with('Newsfeed')->where('categories_id', 14)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $tech = FeedCategory::with('Newsfeed')->where('categories_id', 18)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $others = FeedCategory::with('Category')->whereNotIn('categories_id', [6, 14, 25])->SelectRaw('categories_id,COUNT(*) as count')->groupBy('categories_id')->distinct('categories_id')->orderBy('count', 'desc')->limit(10)->get();
+        $allcate = content_categories::all();
+        $allcateg = '';
+        foreach ($allcate as $cate) {
+            $newscate = FeedCategory::with('Newsfeed.editor', 'Category')->where('categories_id', $cate->id)->orderBy('id', 'desc')->limit(1)->get();
+
+            if (count($newscate) == 0) {
+
+            } else {
+                $allcateg[] = $newscate;
+            }
+        }
+
         $content = $this->Latest();
         $rising = $this->RisingFeeds();
         $featured = $this->FeaturedFeeds();
+
         //echo($content);
-        return view('template2', ['contents' => $content, 'rising' => $rising, 'featured' => $featured]);
+        return view('front.homepage', ['latest' => $content, 'trending' => $rising, 'popular' => $featured, 'entertainments' => $entertainment, 'categories' => $allcateg, 'business' => $business, 'health' => $health, 'techs' => $tech, 'politics' => $politics, 'others' => $others]);
     }
 
     public function FeaturedFeeds()
     {
-        return news_feed::where('publish_status', 1)->where('id', '>', 3914)->orderBy('read_counter', 'desc')->paginate(4);
+        return news_feed::where('publish_status', 1)->orderBy('read_counter', 'desc')->paginate(5);
     }
 
     public function RisingFeeds()
     {
-        return news_feed::where('publish_status', 1)->where('id', '>', 3914)->orderBy('shares', 'desc')->paginate(4);
+        $today = new \DateTime();
+        return news_feed::where('publish_status', 1)->where('created_at', '>', $today->modify('-2 days'))->orderBy('read_counter', 'desc')->paginate(5);
     }
 
     public function Latest()
     {
-        return news_feed::where('publish_status', 1)->orderBy('id', 'desc')->paginate(7);
+        return news_feed::where('publish_status', 1)->orderBy('id', 'desc')->paginate(5);
 
     }
 
@@ -239,19 +320,20 @@ class content_controller extends Controller
 
     public function PostComment($id, Request $request)
     {
-            $article = news_feed::findOrFail($id);
+        $article = news_feed::findOrFail($id);
 
-            // Correct way to do it.
-            // $article->comments()->create($request->all());
-            $comment = new Comment;
-            $comment->user_name = $request->input('user_name');
-            $comment->body = $request->input('body');
+        // Correct way to do it.
+        // $article->comments()->create($request->all());
+        $comment = new Comment;
+        $comment->user_name = $request->input('user_name');
+        $comment->body = $request->input('body');
 
-            $article->comments()->save($comment);
+        $article->comments()->save($comment);
 
-            return redirect()->route('articles.show', [$article->id]);
+        return redirect()->route('articles.show', [$article->id]);
 
     }
+
     public function PostCommentReply($id, Request $request)
     {
         $comment = Comment::findOrFail($id);

@@ -18,6 +18,8 @@ use newsbook\FeedCategory;
 use newsbook\LocalImage;
 use newsbook\news_feed;
 use newsbook\pending_feed;
+use newsbook\tag;
+use newsbook\tagged;
 use PicoFeed\PicoFeedException;
 use PicoFeed\Reader\Reader;
 
@@ -85,6 +87,7 @@ class fetch
                                 } else {
                                     $publish = $this->PublishContents($title, $description, $content, $source_date, $newImage, $source->id, $perm, $url);
                                     $this->UpdateCategory($category, $publish->id, $title);
+                                    $this->UpdateTag($title, $content, $publish->id);
                                     break;
                                 }
 
@@ -108,6 +111,7 @@ class fetch
                                             } else {
                                                 $publish = $this->PublishContents($title, $description, $content, $source_date, $newImage, $source->id, $perm, $url);
                                                 $this->UpdateCategory($category, $publish->id, $title);
+                                                $this->UpdateTag($title, $content, $publish->id);
                                                 break 2;
                                             }
 
@@ -192,6 +196,7 @@ class fetch
         }
     }
 
+
     function UpdateCategory(array $category, $feed_id, $title)
     {
         $category = array_unique($category);
@@ -205,7 +210,60 @@ class fetch
         } else {
             $this->AddCategory($title, $feed_id);
         }
+
     }
+
+    function UpdateTag($title, $content, $feed_id)
+    {
+        $tag = $this->DoTags($title . ' ' . $content);
+        $tags = explode(',', $tag);
+        $tags = array_unique($tags);
+        $tags = array_filter($tags);
+        $tags = array_values($tags);
+        if (!empty($tags)) {
+            foreach ($tags as $categor) {
+                $category_id = tag::firstOrCreate(['tag' => $categor]);
+                tagged::create(['news_feed_id' => $feed_id, 'tags_id' => $category_id->id]);
+            }
+        }
+        news_feed::where('id', $feed_id)->update([
+            'havetag' => 1
+        ]);
+    }
+
+    function UpdateOldTag()
+    {
+        $totag = news_feed::where('havetag', 0)->get();
+        if ($totag !== null) {
+
+
+            foreach ($totag as $tot) {
+                $title = $tot->feed_title;
+                $content = $tot->feed_content;
+                $feed_id = $tot->id;
+
+                $tag = $this->DoTags($title . ' ' . $content);
+                $tags = explode(',', $tag);
+                $tags = array_unique($tags);
+                $tags = array_filter($tags);
+                $tags = array_values($tags);
+                if (!empty($tags)) {
+                    foreach ($tags as $categor) {
+                        $category_id = tag::firstOrCreate(['tag' => $categor]);
+                        tagged::create(['news_feed_id' => $feed_id, 'tags_id' => $category_id->id]);
+                    }
+                }
+                news_feed::where('id', $feed_id)->update([
+                    'havetag' => 1
+                ]);
+            }
+            return 'tags updated';
+        } else {
+            return 'no tags to update';
+        }
+
+    }
+
 
     public function UploadImage($image)
     {
@@ -293,20 +351,19 @@ class fetch
             }*/
 
             $file = "images/" . uniqid("latestng") . '.jpg';
-            $img->insert('https://www.latestng.com/images/latestng_watermark.png', 'bottom-right');
+            //$img->insert('https://www.latestng.com/images/latestng_watermark.png', 'bottom-right');
             $path = public_path($file);
             $img->save($path, 60);
             LocalImage::create([
                 'source' => $url,
                 'latestng' => 'https://latestng.com/' . $file
             ]);
-            return 'https://latestng.com/' . $file;
+            return 'http://latestng.com/' . $file;
         } catch (Exception $e) {
             return $url;
         } catch (\Symfony\Component\Debug\Exception\FatalErrorException $e) {
             return $url;
-        }
-        catch (NotReadableException $e) {
+        } catch (NotReadableException $e) {
             return $url;
         }
     }
@@ -330,20 +387,19 @@ class fetch
                 $width = $img->width();
             }*/
             $file = "images/" . uniqid("latestng") . '.jpg';
-            $img->insert('https://www.latestng.com/images/latestng_watermark.png', 'bottom-right');
+            //$img->insert('https://www.latestng.com/images/latestng_watermark.png', 'bottom-right');
             //$base=base64_decode($request['image']);
             $img->save($file, 60);
             LocalImage::create([
                 'source' => $url,
                 'latestng' => 'https://latestng.com/' . $file
             ]);
-            return 'https://latestng.com/' . $file;
+            return 'http://latestng.com/' . $file;
         } catch (Exception $e) {
             return $url;
         } catch (\Symfony\Component\Debug\Exception\FatalErrorException $e) {
             return $url;
-        }
-        catch (NotReadableException $e) {
+        } catch (NotReadableException $e) {
             return $url;
         }
     }
@@ -375,5 +431,66 @@ class fetch
         } else {
             return $this->UploadImageLocally($url);
         }
+    }
+
+    function DoTags($text)
+    {
+        include_once 'keyword-generator/class.colossal-mind-mb-keyword-generator.php';
+
+
+// REQUIRED
+// load the text, either from database or a file
+// text MAY contain HTML tags
+        $params['content'] = $text;
+
+
+// OPTIONAL, but VERY IMPORTANT
+// if not defined, will default to UTF-8
+        $params['encoding'] = 'utf-8'; // case insensitive
+
+
+// this one is used so that this example is properly displayed in browser
+// the encoding should be same as the value above
+        header('Content-type: text/html; charset=utf-8');
+
+
+// OPTIONAL
+// define the language of the text
+// if not defined, will default to English (en_GB)
+        $params['lang'] = 'en_GB'; // case insensitive
+
+
+// OPTIONAL
+// specify only if you want any languages to be ignored by the class
+// What it does: If the class encounters this language(s), it will
+// return empty string ''
+// ignore languages
+        $params['ignore'] = array('zh_CN', 'zh_TW', 'ja_JP'); // must be an array; lower case; case sensitive !!!
+//----------------------------------------------------------------------
+//OPTIONAL, but VERY IMPORTANT
+// if not defined, will default to values set in the class
+
+// 1-word keywords
+        $params['min_word_length'] = 3; // min length of single words
+        $params['min_word_occur'] = 3; // min occur of single words
+
+// 2-word keyphrases
+        $params['min_2words_length'] = 4; // min length of words for 2 word phrases; value 0 will DISABLE !!!
+        $params['min_2words_phrase_length'] = 10; // min length of 2 word phrases
+        $params['min_2words_phrase_occur'] = 3; // min occur of 2 words phrase
+
+// 3-word keyphrases
+        $params['min_3words_length'] = 4; // min length of words for 3 word phrases; value 0 will DISABLE !!!
+        $params['min_3words_phrase_length'] = 12; // min length of 3 word phrases
+        $params['min_3words_phrase_occur'] = 2; // min occur of 3 words phrase
+//----------------------------------------------------------------------
+//REQUIRED
+        $keyword = new \colossal_mind_mb_keyword_gen($params);
+
+// REQUIRED
+        $autoKeywords = $keyword->get_keywords();
+
+        return $autoKeywords; // house,stimulus,created,saved,million,jobs,reports,state,money,obama,administration,republican,stimulus money,jobs saved
+
     }
 } 
