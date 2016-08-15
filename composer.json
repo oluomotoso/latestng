@@ -15,7 +15,8 @@
         "intervention/imagecache": "^2.3",
         "roumen/sitemap": "^2.6",
         "slynova/laravel-commentable": "^2.0",
-        "laravel/socialite": "^2.0"
+        "laravel/socialite": "^2.0",
+        "nqxcode/laravel-lucene-search": "^2.2"
 
     },
     "require-dev": {

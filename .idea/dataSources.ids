@@ -1,266 +1,860 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="MySQL - latestng_com@localhost" uuid="ceebe541-20d2-4d50-847a-03d22224670d">
+  <data-source name="MySQL - latestng_com@localhost" uuid="ceebe541-20d2-4d50-847a-03d22224670d">
     <database-info product="MySQL" version="5.6.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <schema name="" catalog="latestng_com"/>
-    <table name="autopost_subscribers" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="autopost_subscribers_user_id_foreign" columns="user_id" ref-table="users" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-    </table>
-    <table name="autopost_subscribers_facebook_account" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="token" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="refresh_token" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="facebook_id" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="token_expiry" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <primary-key name="PRIMARY" columns="id"/>
-    </table>
-    <table name="comments" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="body" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <column name="parent_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <column name="lft" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <column name="rgt" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <column name="depth" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <column name="commentable_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <column name="commentable_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <index name="comments_commentable_id_index" unique="false" columns="commentable_id"/>
-      <index name="comments_commentable_type_index" unique="false" columns="commentable_type"/>
-      <index name="comments_user_id_index" unique="false" columns="user_id"/>
-    </table>
-    <table name="content_categories" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="category" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="tags" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="feed_category_ibfk_2" table="feed_category" schema="" catalog="latestng_com" columns="categories_id"/>
-      <index name="category" unique="true" columns="category"/>
-    </table>
-    <table name="content_source" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="short_name" sqlType="VARCHAR" length="10" precision="0" nullable="false" jdbcType="12"/>
-      <column name="url" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="website" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="description" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="created_by" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="region_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MQ=="/>
-      <column name="categories_param" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <column name="title_param" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <column name="status" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="last_modified" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="etag" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_source_created_by" columns="created_by" ref-table="users" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="url_UNIQUE" unique="true" columns="url"/>
-    </table>
-    <table name="facebook_accounts" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="facebook_id" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="token" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="refresh_token" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="user_info" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="availability" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MQ=="/>
-      <column name="region_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MQ=="/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="facebook_edges_ibfk_1" table="facebook_edges" schema="" catalog="latestng_com" columns="facebook_account_owner"/>
-      <index name="facebook_id" unique="true" columns="facebook_id"/>
-    </table>
-    <table name="facebook_edges" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="facebook_id" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="facebook_account_owner" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="edge_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="response" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="facebook_edges_ibfk_1" columns="facebook_account_owner" ref-table="facebook_accounts" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="facebook_id" unique="true" columns="facebook_id"/>
-    </table>
-    <table name="feed_category" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="news_feed_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="categories_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="feed_category_ibfk_1" columns="news_feed_id" ref-table="news_feed" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="feed_category_ibfk_2" columns="categories_id" ref-table="content_categories" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="id" unique="true" columns="id"/>
-    </table>
-    <table name="jobs_feed" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="feed_title" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="feed_url" sqlType="VARCHAR" length="200" precision="0" nullable="true" jdbcType="12"/>
-      <column name="industry" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="feed_description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
-      <column name="feed_content" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="published_date" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="content_source" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="image_url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="expiry_date" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="position" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="company" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="publish_status" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="location" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <index name="feed_url" unique="true" columns="feed_url"/>
-      <index name="FK_feed_source" unique="false" columns="content_source"/>
-    </table>
-    <table name="migrations" schema="" catalog="latestng_com" type="TABLE">
-      <column name="migration" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="batch" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-    </table>
-    <table name="news_feed" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="feed_title" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="feed_url" sqlType="VARCHAR" length="200" precision="0" nullable="true" jdbcType="12"/>
-      <column name="feed_description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
-      <column name="feed_content" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="feed_source_date" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="content_source" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="image_url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="music_url" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <column name="video_url" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <column name="site_url" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <column name="facebook" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="twitter" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="read_counter" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="approved_by" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <column name="publish_status" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" def="MQ=="/>
-      <column name="thumb_image" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="shares" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="image_upload_url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="perm_url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="affliated_regions" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="JzEn"/>
-      <column name="fb_id" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="fb_group" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="metrics" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" def="MA=="/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_publish_approved" columns="approved_by" ref-table="users" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_publish_status" columns="publish_status" ref-table="publish_status" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="feed_category_ibfk_1" table="feed_category" schema="" catalog="latestng_com" columns="news_feed_id"/>
-      <index name="feed_url" unique="true" columns="feed_url"/>
-      <index name="FK_feed_source" unique="false" columns="content_source"/>
-    </table>
-    <table name="pending_feed" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="feed_title" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="feed_url" sqlType="VARCHAR" length="200" precision="0" nullable="true" jdbcType="12"/>
-      <column name="feed_category" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="feed_description" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
-      <column name="feed_content" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="feed_source_date" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="content_source" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="image_url" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="music_url" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <column name="video_url" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <column name="site_url" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="publish_status" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <index name="feed_url" unique="true" columns="feed_url"/>
-      <index name="FK_feed_source" unique="false" columns="content_source"/>
-    </table>
-    <table name="publish_status" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="status" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_publish_status" table="news_feed" schema="" catalog="latestng_com" columns="publish_status"/>
-    </table>
-    <table name="region" schema="" catalog="latestng_com" type="TABLE">
-      <column name="region_name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="region_keywords" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <column name="region_short_name" sqlType="VARCHAR" length="10" precision="0" nullable="false" jdbcType="12" def="J25nJw=="/>
-      <primary-key name="PRIMARY" columns="id"/>
-    </table>
-    <table name="tagged" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="tags_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="news_feed_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="tagged_tags_id_foreign" columns="tags_id" ref-table="tags" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-    </table>
-    <table name="tags" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="tag" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="tagged_tags_id_foreign" table="tagged" schema="" catalog="latestng_com" columns="tags_id"/>
-    </table>
-    <table name="tasks" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <index name="unique_name" unique="true" columns="name"/>
-    </table>
-    <table name="twitter_accounts" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="token" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="refresh_token" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="username" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <primary-key name="PRIMARY" columns="id"/>
-    </table>
-    <table name="user_role" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="role" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_user_role" table="users" schema="" catalog="latestng_com" columns="role"/>
-      <index name="role" unique="true" columns="role"/>
-    </table>
-    <table name="users" schema="" catalog="latestng_com" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="username" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="password" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="role" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="remember_token" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_user_role" columns="role" ref-table="user_role" ref-schema="" ref-catalog="latestng_com" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="autopost_subscribers_user_id_foreign" table="autopost_subscribers" schema="" catalog="latestng_com" columns="user_id"/>
-      <exported-key name="FK_source_created_by" table="content_source" schema="" catalog="latestng_com" columns="created_by"/>
-      <exported-key name="FK_publish_approved" table="news_feed" schema="" catalog="latestng_com" columns="approved_by"/>
-    </table>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="latestng_com">
+        <visible>1</visible>
+      </schema>
+      <table id="2" parent="1" name="autopost_subscribers"/>
+      <table id="3" parent="1" name="autopost_subscribers_facebook_account"/>
+      <table id="4" parent="1" name="comments"/>
+      <table id="5" parent="1" name="content_categories"/>
+      <table id="6" parent="1" name="content_source"/>
+      <table id="7" parent="1" name="facebook_accounts"/>
+      <table id="8" parent="1" name="facebook_edges"/>
+      <table id="9" parent="1" name="feed_category"/>
+      <table id="10" parent="1" name="jobs_feed"/>
+      <table id="11" parent="1" name="migrations"/>
+      <table id="12" parent="1" name="news_feed"/>
+      <table id="13" parent="1" name="pending_feed"/>
+      <table id="14" parent="1" name="publish_status"/>
+      <table id="15" parent="1" name="region"/>
+      <table id="16" parent="1" name="tagged"/>
+      <table id="17" parent="1" name="tags"/>
+      <table id="18" parent="1" name="tasks"/>
+      <table id="19" parent="1" name="twitter_accounts"/>
+      <table id="20" parent="1" name="user_role"/>
+      <table id="21" parent="1" name="users"/>
+      <column id="22" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="23" parent="2" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+      </column>
+      <column id="24" parent="2" name="created_at">
+        <data-type>TIMESTAMP(19)|93</data-type>
+      </column>
+      <column id="25" parent="2" name="updated_at">
+        <data-type>TIMESTAMP(19)|93</data-type>
+      </column>
+      <key id="26" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="27" parent="2" name="autopost_subscribers_user_id_foreign">
+        <columns>user_id</columns>
+        <ref-key>~.users.PRIMARY</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <column id="28" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="29" parent="3" name="name">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="30" parent="3" name="token">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="31" parent="3" name="refresh_token">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="32" parent="3" name="email">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="33" parent="3" name="facebook_id">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="34" parent="3" name="token_expiry">
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="35" parent="3" name="created_at">
+        <data-type>TIMESTAMP(19)|93</data-type>
+      </column>
+      <column id="36" parent="3" name="updated_at">
+        <data-type>TIMESTAMP(19)|93</data-type>
+      </column>
+      <key id="37" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="38" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="39" parent="4" name="created_at">
+        <data-type>TIMESTAMP(19)|93</data-type>
+      </column>
+      <column id="40" parent="4" name="updated_at">
+        <data-type>TIMESTAMP(19)|93</data-type>
+      </column>
+      <column id="41" parent="4" name="title">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="42" parent="4" name="body">
+        <mandatory>1</mandatory>
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="43" parent="4" name="parent_id">
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="44" parent="4" name="lft">
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="45" parent="4" name="rgt">
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="46" parent="4" name="depth">
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="47" parent="4" name="commentable_id">
+        <data-type>INT UNSIGNED(10)|4</data-type>
+      </column>
+      <column id="48" parent="4" name="commentable_type">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="49" parent="4" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+      </column>
+      <index id="50" parent="4" name="comments_commentable_id_index">
+        <columns>commentable_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="51" parent="4" name="comments_commentable_type_index">
+        <columns>commentable_type</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="52" parent="4" name="comments_user_id_index">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="53" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="54" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="55" parent="5" name="category">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="56" parent="5" name="tags">
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="57" parent="5" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="58" parent="5" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <index id="59" parent="5" name="category">
+        <columns>category</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="60" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="61" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="62" parent="6" name="title">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="63" parent="6" name="short_name">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(10)|12</data-type>
+      </column>
+      <column id="64" parent="6" name="url">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="65" parent="6" name="website">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="66" parent="6" name="description">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="67" parent="6" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="68" parent="6" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="69" parent="6" name="created_by">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+      </column>
+      <column id="70" parent="6" name="region_id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <default-expression>1</default-expression>
+      </column>
+      <column id="71" parent="6" name="categories_param">
+        <mandatory>1</mandatory>
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="72" parent="6" name="title_param">
+        <mandatory>1</mandatory>
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="73" parent="6" name="status">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="74" parent="6" name="last_modified">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="75" parent="6" name="etag">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <index id="76" parent="6" name="url_UNIQUE">
+        <columns>url</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="77" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="78" parent="6" name="FK_source_created_by">
+        <columns>created_by</columns>
+        <ref-key>~.users.PRIMARY</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <column id="79" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="80" parent="7" name="facebook_id">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="81" parent="7" name="token">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="82" parent="7" name="refresh_token">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="83" parent="7" name="name">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="84" parent="7" name="email">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="85" parent="7" name="user_info">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="86" parent="7" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="87" parent="7" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="88" parent="7" name="availability">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <default-expression>1</default-expression>
+      </column>
+      <column id="89" parent="7" name="region_id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <default-expression>1</default-expression>
+      </column>
+      <index id="90" parent="7" name="facebook_id">
+        <columns>facebook_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="91" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="92" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="93" parent="8" name="name">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="94" parent="8" name="facebook_id">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="95" parent="8" name="facebook_account_owner">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="96" parent="8" name="edge_type">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="97" parent="8" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="98" parent="8" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="99" parent="8" name="response">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <index id="100" parent="8" name="facebook_id">
+        <columns>facebook_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="101" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="102" parent="8" name="facebook_edges_ibfk_1">
+        <columns>facebook_account_owner</columns>
+        <ref-key>~.facebook_accounts.PRIMARY</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <column id="103" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="104" parent="9" name="news_feed_id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="105" parent="9" name="categories_id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <index id="106" parent="9" name="id">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="107" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="108" parent="9" name="feed_category_ibfk_1">
+        <columns>news_feed_id</columns>
+        <ref-key>~.news_feed.PRIMARY</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="109" parent="9" name="feed_category_ibfk_2">
+        <columns>categories_id</columns>
+        <ref-key>~.content_categories.PRIMARY</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <column id="110" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="111" parent="10" name="feed_title">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="112" parent="10" name="feed_url">
+        <data-type>VARCHAR(200)|12</data-type>
+      </column>
+      <column id="113" parent="10" name="industry">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="114" parent="10" name="feed_description">
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="115" parent="10" name="feed_content">
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="116" parent="10" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="117" parent="10" name="published_date">
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="118" parent="10" name="content_source">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="119" parent="10" name="image_url">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="120" parent="10" name="expiry_date">
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="121" parent="10" name="position">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="122" parent="10" name="company">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="123" parent="10" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="124" parent="10" name="publish_status">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="125" parent="10" name="location">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <index id="126" parent="10" name="feed_url">
+        <columns>feed_url</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="127" parent="10" name="FK_feed_source">
+        <columns>content_source</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="128" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="129" parent="11" name="migration">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="130" parent="11" name="batch">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="131" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="132" parent="12" name="feed_title">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="133" parent="12" name="feed_url">
+        <data-type>VARCHAR(200)|12</data-type>
+      </column>
+      <column id="134" parent="12" name="feed_description">
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="135" parent="12" name="feed_content">
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="136" parent="12" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="137" parent="12" name="feed_source_date">
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="138" parent="12" name="content_source">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="139" parent="12" name="image_url">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="140" parent="12" name="music_url">
+        <data-type>VARCHAR(100)|12</data-type>
+      </column>
+      <column id="141" parent="12" name="video_url">
+        <data-type>VARCHAR(100)|12</data-type>
+      </column>
+      <column id="142" parent="12" name="site_url">
+        <data-type>VARCHAR(100)|12</data-type>
+      </column>
+      <column id="143" parent="12" name="facebook">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="144" parent="12" name="twitter">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="145" parent="12" name="read_counter">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="146" parent="12" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="147" parent="12" name="approved_by">
+        <data-type>INT UNSIGNED(10)|4</data-type>
+      </column>
+      <column id="148" parent="12" name="publish_status">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <default-expression>1</default-expression>
+      </column>
+      <column id="149" parent="12" name="thumb_image">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="150" parent="12" name="shares">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="151" parent="12" name="image_upload_url">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="152" parent="12" name="perm_url">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="153" parent="12" name="affliated_regions">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="154" parent="12" name="fb_id">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="155" parent="12" name="fb_group">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="156" parent="12" name="metrics">
+        <data-type>INT(10)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <index id="157" parent="12" name="feed_url">
+        <columns>feed_url</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="158" parent="12" name="FK_feed_source">
+        <columns>content_source</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="159" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="160" parent="12" name="FK_publish_approved">
+        <columns>approved_by</columns>
+        <ref-key>~.users.PRIMARY</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="161" parent="12" name="FK_publish_status">
+        <columns>publish_status</columns>
+        <ref-key>~.publish_status.PRIMARY</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <column id="162" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="163" parent="13" name="feed_title">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="164" parent="13" name="feed_url">
+        <data-type>VARCHAR(200)|12</data-type>
+      </column>
+      <column id="165" parent="13" name="feed_category">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="166" parent="13" name="feed_description">
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="167" parent="13" name="feed_content">
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="168" parent="13" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="169" parent="13" name="feed_source_date">
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="170" parent="13" name="content_source">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="171" parent="13" name="image_url">
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="172" parent="13" name="music_url">
+        <data-type>VARCHAR(100)|12</data-type>
+      </column>
+      <column id="173" parent="13" name="video_url">
+        <data-type>VARCHAR(100)|12</data-type>
+      </column>
+      <column id="174" parent="13" name="site_url">
+        <data-type>VARCHAR(100)|12</data-type>
+      </column>
+      <column id="175" parent="13" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="176" parent="13" name="publish_status">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <index id="177" parent="13" name="feed_url">
+        <columns>feed_url</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="178" parent="13" name="FK_feed_source">
+        <columns>content_source</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="179" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="180" parent="14" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="181" parent="14" name="status">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <key id="182" parent="14" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="183" parent="15" name="region_name">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="184" parent="15" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="185" parent="15" name="region_keywords">
+        <mandatory>1</mandatory>
+        <data-type>TEXT(65535)|-1</data-type>
+      </column>
+      <column id="186" parent="15" name="region_short_name">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(10)|12</data-type>
+        <default-expression>&apos;ng&apos;</default-expression>
+      </column>
+      <key id="187" parent="15" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="188" parent="16" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="189" parent="16" name="tags_id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+      </column>
+      <column id="190" parent="16" name="news_feed_id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+      </column>
+      <key id="191" parent="16" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="192" parent="16" name="tagged_tags_id_foreign">
+        <columns>tags_id</columns>
+        <ref-key>~.tags.PRIMARY</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+      <column id="193" parent="17" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="194" parent="17" name="tag">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="195" parent="17" name="created_at">
+        <data-type>TIMESTAMP(19)|93</data-type>
+      </column>
+      <column id="196" parent="17" name="updated_at">
+        <data-type>TIMESTAMP(19)|93</data-type>
+      </column>
+      <key id="197" parent="17" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="198" parent="18" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+      </column>
+      <column id="199" parent="18" name="name">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="200" parent="18" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="201" parent="18" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <index id="202" parent="18" name="unique_name">
+        <columns>name</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="203" parent="18" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="204" parent="19" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="205" parent="19" name="token">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="206" parent="19" name="refresh_token">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="207" parent="19" name="username">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="208" parent="19" name="email">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="209" parent="19" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="210" parent="19" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <key id="211" parent="19" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="212" parent="20" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="213" parent="20" name="role">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="214" parent="20" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="215" parent="20" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <index id="216" parent="20" name="role">
+        <columns>role</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="217" parent="20" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="218" parent="21" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="219" parent="21" name="email">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="220" parent="21" name="username">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="221" parent="21" name="password">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <column id="222" parent="21" name="role">
+        <mandatory>1</mandatory>
+        <data-type>INT UNSIGNED(10)|4</data-type>
+      </column>
+      <column id="223" parent="21" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="224" parent="21" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(19)|93</data-type>
+      </column>
+      <column id="225" parent="21" name="remember_token">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(255)|12</data-type>
+      </column>
+      <key id="226" parent="21" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="227" parent="21" name="FK_user_role">
+        <columns>role</columns>
+        <ref-key>~.user_role.PRIMARY</ref-key>
+        <cascade-update-rule>no_action</cascade-update-rule>
+        <cascade-delete-rule>no_action</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
   </data-source>
 </component>

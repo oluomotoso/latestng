@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - latestng_com@localhost" uuid="ceebe541-20d2-4d50-847a-03d22224670d">
+      <user-name>root</user-name>
+      <introspection-scope>latestng_com:*</introspection-scope>
+      <resolve-scope>latestng_com:*</resolve-scope>
+    </data-source>
+  </component>
+</project>

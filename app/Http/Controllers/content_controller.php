@@ -12,7 +12,9 @@ use newsbook\content_categories;
 use newsbook\FeedCategory;
 use newsbook\Http\Requests;
 use newsbook\news_feed;
+use newsbook\tag;
 use newsbook\tagged;
+use Nqxcode\LuceneSearch\Search;
 use Slynova\Commentable\Models\Comment;
 
 
@@ -35,7 +37,9 @@ class content_controller extends Controller
         try {
             $request = new Request();
             DB::table('news_feed')->where('id', $id)->increment('read_counter');
-            $content = news_feed::with('feed_category.Category', 'tagged.tags', 'editor')->find($id);
+            $content = news_feed::with(['feed_category.Category', 'tagged.tags' => function ($query) {
+                    $query->orderBy('tag', 'desc');
+                }, 'editor'])->find($id);
 
             if (isset($_GET['p'])) {
                 $page = $_GET['p'];
@@ -61,7 +65,7 @@ class content_controller extends Controller
             $entertainment = FeedCategory::with('Newsfeed')->where('categories_id', 25)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
             $business = FeedCategory::with('Newsfeed')->where('categories_id', 6)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
             $politics = FeedCategory::with('Newsfeed')->where('categories_id', 1)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
-            $health = FeedCategory::with('Newsfeed')->where('categories_id', 14)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+            $health = FeedCategory::with('Newsfeed')->whereIn('categories_id', [7, 8])->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
             $tech = FeedCategory::with('Newsfeed')->where('categories_id', 18)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
             $others = FeedCategory::with('Category')->whereNotIn('categories_id', [6, 14, 25])->SelectRaw('categories_id,COUNT(*) as count')->groupBy('categories_id')->distinct('categories_id')->orderBy('count', 'desc')->limit(10)->get();
             $previous_id = news_feed::where('id', '<', $id)->max('id');;
@@ -191,7 +195,42 @@ class content_controller extends Controller
 
     public function DisplayCategory($category)
     {
-        $category_id = content_categories::where('category', $category)->get();
+
+
+        $entertainment = FeedCategory::with('Newsfeed')->where('categories_id', 25)->orWhere('categories_id', 27)->orWhere('categories_id', 31)->orWhere('categories_id', 32)->distinct('news_feed_id')->orderBy('id', 'desc')->get();
+        $business = FeedCategory::with('Newsfeed')->where('categories_id', 6)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $politics = FeedCategory::with('Newsfeed')->where('categories_id', 1)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $health = FeedCategory::with('Newsfeed')->whereIn('categories_id', [7, 8])->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $tech = FeedCategory::with('Newsfeed')->where('categories_id', 18)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $others = FeedCategory::with('Category')->whereNotIn('categories_id', [1, 6, 14, 18, 25])->SelectRaw('categories_id,COUNT(*) as count')->groupBy('categories_id')->distinct('categories_id')->orderBy('count', 'desc')->limit(10)->get();
+        $popular_cate = FeedCategory::with('Category')->SelectRaw('categories_id,COUNT(*) as count')->groupBy('categories_id')->distinct('categories_id')->orderBy('count', 'desc')->limit(10)->get();
+        if ($category == 'music-videos') {
+            $category_id = content_categories::whereIn('category', ['music', 'video'])->get();
+            $tag1 = explode(',', $category_id[0]->tags);
+            $tag2 = explode(',', $category_id[1]->tags);
+            $tags = array_merge($tag1, $tag2);
+            $tags = array_unique($tags);
+            $tags = array_filter($tags);
+            $tags = array_values($tags);
+            $contents = FeedCategory::with('Newsfeed')->whereIn('categories_id', [7, 8])->distinct('news_feed_id')->orderBy('id', 'desc')->simplePaginate(10);
+        } else {
+            $category_id = content_categories::where('category', $category)->get();
+            $tags = explode(',', $category_id[0]->tags);
+            $tags = array_unique($tags);
+            $tags = array_filter($tags);
+            $tags = array_values($tags);
+
+            $contents = FeedCategory::with('Newsfeed')->where('categories_id', $category_id[0]->id)->distinct('news_feed_id')->orderBy('id', 'desc')->simplePaginate(10);
+
+        }
+
+        return view('front.category', ['contents' => $contents, 'entertainments' => $entertainment, 'category' => $category_id, 'tags' => $tags, 'categories' => $popular_cate, 'business' => $business, 'health' => $health, 'techs' => $tech, 'politics' => $politics, 'others' => $others]);
+
+    }
+
+    public function DisplayTags($category)
+    {
+        $category_id = tag::where('tag', $category)->get();
 
         $entertainment = FeedCategory::with('Newsfeed')->where('categories_id', 25)->orWhere('categories_id', 27)->orWhere('categories_id', 31)->orWhere('categories_id', 32)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
         $business = FeedCategory::with('Newsfeed')->where('categories_id', 6)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
@@ -204,7 +243,7 @@ class content_controller extends Controller
         $tags = array_unique($tags);
         $tags = array_filter($tags);
         $tags = array_values($tags);
-        $contents = FeedCategory::with('Newsfeed')->where('categories_id', $category_id[0]->id)->distinct('news_feed_id')->orderBy('id', 'desc')->paginate(10);
+        $contents = tagged::with('newsfeed')->where('tags_id', $category_id[0]->id)->distinct('news_feed_id')->orderBy('id', 'desc')->paginate(10);
 
         return view('front.category', ['contents' => $contents, 'entertainments' => $entertainment, 'category' => $category_id, 'tags' => $tags, 'categories' => $popular_cate, 'business' => $business, 'health' => $health, 'techs' => $tech, 'politics' => $politics, 'others' => $others]);
 
@@ -215,7 +254,7 @@ class content_controller extends Controller
         $entertainment = FeedCategory::with('Newsfeed')->where('categories_id', 25)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
         $business = FeedCategory::with('Newsfeed')->where('categories_id', 6)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
         $politics = FeedCategory::with('Newsfeed')->where('categories_id', 1)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
-        $health = FeedCategory::with('Newsfeed')->where('categories_id', 14)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
+        $health = FeedCategory::with('Newsfeed')->whereIn('categories_id', [7, 8])->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
         $tech = FeedCategory::with('Newsfeed')->where('categories_id', 18)->distinct('news_feed_id')->limit(5)->orderBy('id', 'desc')->get();
         $others = FeedCategory::with('Category')->whereNotIn('categories_id', [6, 14, 25])->SelectRaw('categories_id,COUNT(*) as count')->groupBy('categories_id')->distinct('categories_id')->orderBy('count', 'desc')->limit(10)->get();
         $allcate = content_categories::all();
@@ -240,18 +279,28 @@ class content_controller extends Controller
 
     public function FeaturedFeeds()
     {
-        return news_feed::where('publish_status', 1)->orderBy('read_counter', 'desc')->paginate(5);
+        return news_feed::where('publish_status', 1)->orderBy('read_counter', 'desc')->simplePaginate(5);
+    }
+
+    public function DoSearch()
+    {
+        if (isset($_GET['s'])) {
+            $word = $_GET['s'];
+            $query = Search::query($word, '*', ['phrase' => false]);
+            echo($query);
+        }
+
     }
 
     public function RisingFeeds()
     {
         $today = new \DateTime();
-        return news_feed::where('publish_status', 1)->where('created_at', '>', $today->modify('-2 days'))->orderBy('read_counter', 'desc')->paginate(5);
+        return news_feed::where('publish_status', 1)->where('created_at', '>', $today->modify('-2 days'))->orderBy('read_counter', 'desc')->simplePaginate(5);
     }
 
     public function Latest()
     {
-        return news_feed::where('publish_status', 1)->orderBy('id', 'desc')->paginate(5);
+        return news_feed::where('publish_status', 1)->orderBy('id', 'desc')->simplePaginate(5);
 
     }
 
