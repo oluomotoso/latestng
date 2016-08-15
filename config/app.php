@@ -140,6 +140,7 @@ return [
         Roumen\Sitemap\SitemapServiceProvider::class,
         Slynova\Commentable\ServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Nqxcode\LuceneSearch\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -198,6 +199,7 @@ return [
         'Datatables' => yajra\Datatables\Datatables::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Search' => Nqxcode\LuceneSearch\Facade::class,
 
     ],
 

@@ -3,9 +3,11 @@
 namespace newsbook;
 
 use Illuminate\Database\Eloquent\Model;
+use Nqxcode\LuceneSearch\Model\SearchableInterface;
 use Slynova\Commentable\Traits\Commentable;
+use ZendSearch\Lucene\SearchIndexInterface;
 
-class news_feed extends Model
+class news_feed extends Model implements SearchableInterface
 {
     protected $table = 'news_feed';
     //
@@ -14,6 +16,10 @@ class news_feed extends Model
         , 'content_source', 'image_url', 'music_url', 'video_url', 'site_url', 'approved_by', 'publish_status', 'image_upload_url', 'thumb_image', 'perm_url', 'affliated_regions', 'fb_id', 'metrics', 'fb_group', 'havetag'
 
     ];
+    public static function searchableIds()
+    {
+        return self::wherePublish(true)->lists('id');
+    }
 
     public function feed_category()
     {

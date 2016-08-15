@@ -438,7 +438,8 @@ class fetch_controller extends Controller
 
     public function Test()
     {
-
+        $facebook = new LatestngFacebook();
+        $facebook->GetUserFacebookGroupsInfo();
 
     }
 

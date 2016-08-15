@@ -15,6 +15,7 @@
     <meta property="og:locale" content="en_US"/>
     <meta property="article:author" content="https://www.facebook.com/latestng"/>
     <meta property="article:publisher" content="https://www.facebook.com/latestng"/>
+    <meta name="theme-color" content="#3B5999">
     <meta name="keywords"
           content="@if($content->tagged !== null)@foreach($content->tagged as $keyword){{$keyword->tags->tag}},@endforeach @endif"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,8 +50,48 @@
     <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
     <script
         type="text/javascript">stLight.options({publisher: "c653dddc-e16d-453e-a904-8ab2756a1365", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script>
+    <script type='text/javascript'>
+        (function () {
+            var useSSL = 'https:' == document.location.protocol;
+            var src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+            document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+    </script>
 
+    <script type='text/javascript'>
+        googletag.cmd.push(function () {
+            var sidebarad = googletag.sizeMapping().
+                addSize([1280, 800], [
+                    [160, 600],
+                    [120, 600],
+                    [336, 280]
+
+                ]).
+                addSize([600, 800], [
+                    [160, 600],
+                    [120, 600],
+                    [336, 280]
+                ]).
+                addSize([800, 600], [
+                    [160, 600],
+                    [120, 600],
+                    [336, 280]
+                ]).
+                addSize([0, 0], [
+                    [240, 400],
+                    [300, 250]
+
+                ]).build();
+            googletag.defineSlot('/32742566/latestng-003', [[120, 240], [120, 600], [240, 400],[336, 280], [160, 600], [300, 250]], 'div-gpt-ad-1468910906855-0').defineSizeMapping(sidebarad).addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().collapseEmptyDivs();
+            googletag.pubads().enableSyncRendering();
+            googletag.enableServices();
+        });
+    </script>
 </head>
+
 <body>
 
 @include('front.header')
@@ -100,7 +141,7 @@ function human_time_diff($from)
 <div class="container main-wrapper">
 
 <!-- End Main Banner -->
-<div class="mag-content clearfix">
+<div class="mag-content clearfix visible-lg visible-md visible-sm">
     <div class="row">
         <div class="col-md-12">
             <div class="ad728-wrapper">
@@ -111,6 +152,23 @@ function human_time_diff($from)
                      data-ad-client="ca-pub-9946990192994306"
                      data-ad-slot="8946838158"
                      data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mag-content clearfix visible-xs">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ad728-wrapper">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- latestng -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:336px;height:280px"
+                     data-ad-client="ca-pub-9946990192994306"
+                     data-ad-slot="4074850159"></ins>
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
@@ -152,7 +210,11 @@ function human_time_diff($from)
                 {!!$new_content!!}
             </div>
             <!-- .post-content -->
-
+            <div>
+                <span class='st_facebook_hcount' displayText='Facebook'></span>
+                <span class='st_twitter_hcount' displayText='Tweet'></span>
+                <span class='st_whatsapp_hcount' displayText='WhatsApp'></span>
+            </div>
             <footer class="post-meta">
                 <div class="tags-wrapper">
                     <ul class="tags-widget clearfix">
@@ -172,7 +234,7 @@ function human_time_diff($from)
                                     <i class="fa fa-angle-left"></i>
                                     Previous post
                                 </div>
-                                <a href="{{$previous->id}}/{{$previous->perm_url}}" class="post-nav-title">{{$previous->feed_title}}</a>
+                                <a href="/{{$previous->id}}/{{$previous->perm_url}}" class="post-nav-title">{{$previous->feed_title}}</a>
                             </div>
                         </div>
                         @if(count($next)>0)
@@ -182,7 +244,7 @@ function human_time_diff($from)
                                     Next post
                                     <i class="fa fa-angle-right"></i>
                                 </div>
-                                <a href="{{$next->id}}/{{$next->perm_url}}"
+                                <a href="/{{$next->id}}/{{$next->perm_url}}"
                                    class="post-nav-title">{{$next->feed_title}}</a>
                             </div>
                         </div>
@@ -207,7 +269,7 @@ function human_time_diff($from)
             <div class="col-md-6">
                 <article class="news-block small-block">
                     @if($relate->newsfeed->image_url !== null)
-                    <a href="#" class="overlay-link">
+                    <a href="/{{$relate->newsfeed->id}}/{{$relate->newsfeed->perm_url}}" class="overlay-link">
                         <figure class="image-overlay">
                             <img src="{{$relate->newsfeed->image_url}}" alt="">
                         </figure>
@@ -225,7 +287,7 @@ function human_time_diff($from)
                     @endif
                     <header class="news-details">
                         <h3 class="news-title">
-                            <a href="{{$relate->newsfeed->id}}/{{$relate->newsfeed->perm_url}}">
+                            <a href="/{{$relate->newsfeed->id}}/{{$relate->newsfeed->perm_url}}">
                                 {{$relate->newsfeed->feed_title}}
                             </a>
                         </h3>
@@ -250,12 +312,11 @@ function human_time_diff($from)
         <div class="col-md-12">
             <div class="ad728-wrapper mid-wrapper">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- top2 -->
+                <!-- latestng -->
                 <ins class="adsbygoogle"
-                     style="display:block"
+                     style="display:inline-block;width:336px;height:280px"
                      data-ad-client="ca-pub-9946990192994306"
-                     data-ad-slot="1927295350"
-                     data-ad-format="auto"></ins>
+                     data-ad-slot="4074850159"></ins>
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
@@ -264,6 +325,31 @@ function human_time_diff($from)
     </div>
     <!-- End Mid ad -->
     <!-- Comment List -->
+    <div>
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+             */
+
+            var disqus_config = function () {
+                this.page.url = "http://latestng.com/{!!$content->id!!}/{!!$content->perm_url!!}" // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = "latestng/{!!$content->id!!}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+
+                s.src = '//latestng.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+                                                          rel="nofollow"></a></noscript>
+    </div>
+
 </div>
 <!-- End Left big column -->
 
@@ -271,16 +357,11 @@ function human_time_diff($from)
     <aside class="sidebar clearfix">
 
         <div class="widget adwidget">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- top2 -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-9946990192994306"
-                 data-ad-slot="1927295350"
-                 data-ad-format="auto"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div id='div-gpt-ad-1468910906855-0'>
+                <script type='text/javascript'>
+                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1468910906855-0'); });
+                </script>
+            </div>
         </div>
 
         <div class="widget searchwidget">
@@ -301,7 +382,7 @@ function human_time_diff($from)
                 <li role="presentation"><a href="#tab-recent" aria-controls="tab-recent" role="tab" data-toggle="tab">Recent</a>
                 </li>
                 <li role="presentation"><a href="#tab-comments" aria-controls="tab-comments" role="tab"
-                                           data-toggle="tab">Comments</a></li>
+                                           data-toggle="tab">Trending</a></li>
             </ul>
 
             <div class="tab-content">
@@ -424,7 +505,7 @@ function human_time_diff($from)
             <ul>
                 @foreach($categories as $categorie)
                 <li>
-                    <a href="category/{{$categorie->category->category}}">{{$categorie->category->category}} <span
+                    <a href="/category/{{$categorie->category->category}}">{{$categorie->category->category}} <span
                             class="count">{{$categorie->count}}</span></a>
                 </li>
                 @endforeach
@@ -521,5 +602,4 @@ function human_time_diff($from)
 </body>
 
 
-<!-- Mirrored from digitaltheme.co/html/admag/demo/post_simple.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Jul 2016 11:36:29 GMT -->
 </html>

@@ -4,6 +4,8 @@ namespace newsbook\Console\Commands;
 
 use Illuminate\Console\Command;
 use newsbook\latestng\fetch;
+use newsbook\latestng\LatestngFacebook;
+use newsbook\latestng\live;
 
 class UpdateTags extends Command
 {
@@ -27,7 +29,7 @@ class UpdateTags extends Command
      * @return void
      */
     protected $fetch;
-    public function __construct(fetch $fetch)
+    public function __construct(live $fetch)
     {
         parent::__construct();
         $this->fetch = $fetch;
@@ -41,7 +43,7 @@ class UpdateTags extends Command
     public function handle()
     {
         //
-        $info = $this->fetch->UpdateOldTag();
-        $this->info($info);
+        $info = $this->fetch->newPost();
+
     }
 }

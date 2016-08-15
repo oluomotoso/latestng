@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3cce2c36db21e4bca47199affcdf1203",
-    "content-hash": "0db8b97c96b72a7323ca388677cc8d09",
+    "hash": "c28373d380a4f8c0f89c9d082d22a4c0",
+    "content-hash": "0a51a3fa0e72be3fe1628a43d7efa6d4",
     "packages": [
         {
             "name": "baum/baum",
@@ -465,6 +465,7 @@
                 "rest",
                 "web service"
             ],
+            "abandoned": "guzzlehttp/guzzle",
             "time": "2014-01-28 22:29:15"
         },
         {
@@ -1620,6 +1621,188 @@
                 "php"
             ],
             "time": "2016-04-19 13:41:41"
+        },
+        {
+            "name": "nqxcode/laravel-lucene-search",
+            "version": "v2.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nqxcode/laravel-lucene-search.git",
+                "reference": "301df2d741dd695fd7353b89011a3efdae58a257"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nqxcode/laravel-lucene-search/zipball/301df2d741dd695fd7353b89011a3efdae58a257",
+                "reference": "301df2d741dd695fd7353b89011a3efdae58a257",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.2.*",
+                "nqxcode/lucene-stemmer-en-ru": "1.*",
+                "nqxcode/zendsearch": "2.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "orchestra/testbench": "3.2.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nqxcode\\LuceneSearch\\": "src/Nqxcode/LuceneSearch",
+                    "tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Pokoev",
+                    "email": "nc101ux@gmail.com"
+                }
+            ],
+            "description": "Laravel 5.2 package for full-text search over Eloquent models based on ZendSearch Lucene.",
+            "keywords": [
+                "eloquent",
+                "fulltext",
+                "laravel",
+                "lucene",
+                "search",
+                "zendsearch"
+            ],
+            "time": "2016-01-24 13:04:43"
+        },
+        {
+            "name": "nqxcode/lucene-stemmer-en-ru",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nqxcode/lucene-stemmer-en-ru.git",
+                "reference": "bff9403d62ebf354a1f4edf0f62fc42f12193c01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nqxcode/lucene-stemmer-en-ru/zipball/bff9403d62ebf354a1f4edf0f62fc42f12193c01",
+                "reference": "bff9403d62ebf354a1f4edf0f62fc42f12193c01",
+                "shasum": ""
+            },
+            "require": {
+                "nqxcode/phpmorphy": "1.*",
+                "nqxcode/zendsearch": "2.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.6.*"
+            },
+            "suggest": {
+                "ext-stemmer": "Enabling the stemmer extension makes stemming more correct. Install the stemmer extension by following the instructions on https://github.com/hthetiot/php-stemmer#install"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nqxcode\\Stemming\\": "src/Nqxcode/Stemming",
+                    "tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Pokoev",
+                    "email": "nc101ux@gmail.com"
+                }
+            ],
+            "description": "ZendSearch morphology token filter for english and russian words.",
+            "keywords": [
+                "english",
+                "filter",
+                "lucene",
+                "morphology",
+                "russian",
+                "stemming",
+                "zendsearch"
+            ],
+            "time": "2015-11-26 07:15:05"
+        },
+        {
+            "name": "nqxcode/phpmorphy",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nqxcode/phpmorphy.git",
+                "reference": "88b6eaf53eef7551656835985dcbd76dcb0af7ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nqxcode/phpmorphy/zipball/88b6eaf53eef7551656835985dcbd76dcb0af7ac",
+                "reference": "88b6eaf53eef7551656835985dcbd76dcb0af7ac",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/common.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU GPL 2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Kamaev Vladimir",
+                    "email": "heromantor@users.sourceforge.net"
+                }
+            ],
+            "description": "phpMorphy - morphological analyzer library for Russisan, English and German languages",
+            "homepage": "http://phpmorphy.sourceforge.net/",
+            "keywords": [
+                "php-morphy",
+                "phpmorphy"
+            ],
+            "time": "2014-07-26 23:36:29"
+        },
+        {
+            "name": "nqxcode/zendsearch",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nqxcode/ZendSearch.git",
+                "reference": "8ad687b36ad4dd1b8007f0812e5cf73d360cb858"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nqxcode/ZendSearch/zipball/8ad687b36ad4dd1b8007f0812e5cf73d360cb858",
+                "reference": "8ad687b36ad4dd1b8007f0812e5cf73d360cb858",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-stdlib": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ZendSearch": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "a general purpose text search engine written entirely in PHP 5",
+            "homepage": "http://packages.zendframework.com/",
+            "keywords": [
+                "lucene",
+                "zf2"
+            ],
+            "time": "2015-06-12 14:16:08"
         },
         {
             "name": "orchestra/contracts",
@@ -3076,6 +3259,123 @@
                 "laravel5"
             ],
             "time": "2015-12-18 00:56:03"
+        },
+        {
+            "name": "zendframework/zend-hydrator",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-hydrator.git",
+                "reference": "22652e1661a5a10b3f564cf7824a2206cf5a4a65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-hydrator/zipball/22652e1661a5a10b3f564cf7824a2206cf5a4a65",
+                "reference": "22652e1661a5a10b3f564cf7824a2206cf5a4a65",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "^2.0@dev",
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+                "zendframework/zend-filter": "^2.6",
+                "zendframework/zend-inputfilter": "^2.6",
+                "zendframework/zend-serializer": "^2.6.1",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3"
+            },
+            "suggest": {
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0, to support aggregate hydrator usage",
+                "zendframework/zend-filter": "^2.6, to support naming strategy hydrator usage",
+                "zendframework/zend-serializer": "^2.6.1, to use the SerializableStrategy",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3, to support hydrator plugin manager usage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-release-1.0": "1.0-dev",
+                    "dev-release-1.1": "1.1-dev",
+                    "dev-master": "2.0-dev",
+                    "dev-develop": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Hydrator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-hydrator",
+            "keywords": [
+                "hydrator",
+                "zf2"
+            ],
+            "time": "2016-02-18 22:38:26"
+        },
+        {
+            "name": "zendframework/zend-stdlib",
+            "version": "2.7.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-stdlib.git",
+                "reference": "0e44eb46788f65e09e077eb7f44d2659143bcc1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/0e44eb46788f65e09e077eb7f44d2659143bcc1f",
+                "reference": "0e44eb46788f65e09e077eb7f44d2659143bcc1f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "zendframework/zend-hydrator": "~1.1"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1",
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "zendframework/zend-config": "~2.5",
+                "zendframework/zend-eventmanager": "~2.5",
+                "zendframework/zend-filter": "~2.5",
+                "zendframework/zend-inputfilter": "~2.5",
+                "zendframework/zend-serializer": "~2.5",
+                "zendframework/zend-servicemanager": "~2.5"
+            },
+            "suggest": {
+                "zendframework/zend-eventmanager": "To support aggregate hydrator usage",
+                "zendframework/zend-filter": "To support naming strategy hydrator usage",
+                "zendframework/zend-serializer": "Zend\\Serializer component",
+                "zendframework/zend-servicemanager": "To support hydrator plugin manager usage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-release-2.7": "2.7-dev",
+                    "dev-master": "3.0-dev",
+                    "dev-develop": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Stdlib\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-stdlib",
+            "keywords": [
+                "stdlib",
+                "zf2"
+            ],
+            "time": "2016-04-12 21:17:31"
         },
         {
             "name": "zendframework/zendxml",

@@ -133,12 +133,20 @@ class LatestngFacebook
             $token = $user->token;
             try {
                 // Returns a `Facebook\FacebookResponse` object
-                $response = $this->fb->get('' . $user->facebook_id . '/groups', $token);
+                $response = $this->fb->get('' . $user->facebook_id . '/groups/', $token);
                 $data = $response->getGraphEdge();
                 $pagesEdge = $data;
                 //$Edge=$this->UpdateGroupInformation();
                 do {
-                    //var_dump($pagesEdge);
+                    echo($user->name).',';
+                    foreach ($pagesEdge as $group) {
+                        echo($user->name).',';
+                        echo($group['id'] . ',');
+                        echo($group['name'] . ',');
+                        echo('|');
+
+
+                    }
 
 
                 } while ($pagesEdge = $this->fb->next($pagesEdge));
@@ -152,7 +160,7 @@ class LatestngFacebook
 
 
         }
-
+        exit;
     }
 
     public function UserGroupOperations()
@@ -322,7 +330,7 @@ class LatestngFacebook
                     news_feed::where('id', $post->id)->update([
                         'metrics' => $total
                     ]);
-                }else{
+                } else {
 
                 }
             }
@@ -340,7 +348,7 @@ class LatestngFacebook
         if ($posted >= 14) {
             return 'posts have exceeded the maximum ' . $posted . '';
         }
-        $post = news_feed::where('fb_group', 0)->where('metrics', '>=', 20)->where('created_at', '>=', Carbon::now()->subHours(24))->orderBy('created_at', 'desc')->limit(1)->get();
+        $post = news_feed::where('fb_group', 0)->where('metrics', '>=', 15)->where('created_at', '>=', Carbon::now()->subHours(24))->orderBy('created_at', 'desc')->limit(1)->get();
         if (count($post) == 0) {
             return 'No post to post';
         }
@@ -575,5 +583,17 @@ class LatestngFacebook
 
         }
 
+    }
+
+    public function UpdateUserGroups()
+    {
+        session_start();
+        $accounts = facebook_account::all();
+        try {
+            $graphnode = $this->fb->get('/' . $accounts[0]->facebook_id . '/groups', $accounts[0]->token);
+            echo($graphnode->getGraphNode());
+        } catch (\Exception $e) {
+            echo($e->getMessage());
+        }
     }
 }

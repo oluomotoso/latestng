@@ -19,11 +19,11 @@
         <a href="{{url('/category/politics')}}">Politics</a>
         </li>
     <li class="dropdown mega-full menu-color4">
-        <a href="{{url('/category/health')}}">Health</a>
+        <a href="{{url('/category/music-videos')}}">Music and Videos</a>
         </li>
     <!-- .dropdown .mega-full .menu-color4 -->
     <li>
-        <a href="{{url('/category/science')}}">Science
+        <a href="{{url('/category/Science and Technology')}}">Science
             & Tech</a>
 
     </li>
@@ -33,7 +33,7 @@
         <ul>
             @foreach($others as $other)
             <li>
-                <a href="category/{{$other->category->category}}">{{$other->category->category}}</a>
+                <a href="/category/{{$other->category->category}}">{{$other->category->category}}</a>
             </li>
             @endforeach
         </ul>

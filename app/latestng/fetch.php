@@ -215,7 +215,7 @@ class fetch
 
     function UpdateTag($title, $content, $feed_id)
     {
-        $tag = $this->DoTags($title . ' ' . $content);
+        $tag = $this->DoTags($title.' '.$content);
         $tags = explode(',', $tag);
         $tags = array_unique($tags);
         $tags = array_filter($tags);
@@ -242,7 +242,7 @@ class fetch
                 $content = $tot->feed_content;
                 $feed_id = $tot->id;
 
-                $tag = $this->DoTags($title . ' ' . $content);
+                $tag = $this->DoTags($title. ' '.$content);
                 $tags = explode(',', $tag);
                 $tags = array_unique($tags);
                 $tags = array_filter($tags);
@@ -435,6 +435,7 @@ class fetch
 
     function DoTags($text)
     {
+        ini_set('display_errors',1);
         include_once 'keyword-generator/class.colossal-mind-mb-keyword-generator.php';
 
 
@@ -472,12 +473,12 @@ class fetch
 
 // 1-word keywords
         $params['min_word_length'] = 3; // min length of single words
-        $params['min_word_occur'] = 3; // min occur of single words
+        $params['min_word_occur'] = 2; // min occur of single words
 
 // 2-word keyphrases
         $params['min_2words_length'] = 4; // min length of words for 2 word phrases; value 0 will DISABLE !!!
         $params['min_2words_phrase_length'] = 10; // min length of 2 word phrases
-        $params['min_2words_phrase_occur'] = 3; // min occur of 2 words phrase
+        $params['min_2words_phrase_occur'] = 2; // min occur of 2 words phrase
 
 // 3-word keyphrases
         $params['min_3words_length'] = 4; // min length of words for 3 word phrases; value 0 will DISABLE !!!

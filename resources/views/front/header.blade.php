@@ -14,6 +14,8 @@
         f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5FJ36N');</script>
 <!-- End Google Tag Manager -->
+<script src="https://cdn.onthe.io/io.js/4r21s9KmdK03"></script>
+
 <div id="main" class="fixed-sidebar fixed-left-sidebar">
 
 <header class="header fixed-sidebar-header" id="header">
@@ -174,8 +176,8 @@
     <!-- .dropdown-menu .fullwidth -->
 </li>
 <li class="dropdown mega-full menu-color4">
-    <a href="{{url('/category/health')}}" class="dropdown-toggle" data-toggle="dropdown" role="button"
-       aria-expanded="false">Health</a>
+    <a href="{{url('/category/music-videos')}}" class="dropdown-toggle" data-toggle="dropdown" role="button"
+       aria-expanded="false">Music & Videos</a>
     <ul class="dropdown-menu fullwidth">
         <li>
             <!-- 5 block news in Mega Menu -->
@@ -216,7 +218,7 @@
 </li>
 <!-- .dropdown .mega-full .menu-color4 -->
 <li class="dropdown mega-full menu-color4">
-    <a href="{{url('/category/science')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Science
+    <a href="/category/Science and Technology" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Science
         & Tech</a>
     <ul class="dropdown-menu fullwidth">
         <li>
@@ -262,7 +264,7 @@
     <ul class="dropdown-menu">
         @foreach($others as $other)
         <li>
-            <a href="category/{{$other->category->category}}">{{$other->category->category}}</a>
+            <a href="/category/{{$other->category->category}}">{{$other->category->category}}</a>
         </li>
         @endforeach
     </ul>
@@ -299,8 +301,8 @@
 <!-- .navbar -->
 
 <div id="sb-search" class="sb-search">
-    <form>
-        <input class="sb-search-input" placeholder="Enter your search text..." type="text" value="" name="search"
+    <form method="get" action="search">
+        <input class="sb-search-input" placeholder="Enter your search text..." type="text" name="s"
                id="search">
         <input class="sb-search-submit" type="submit" value="">
         <span class="sb-icon-search fa fa-search" data-toggle="tooltip" data-placement="bottom" title="Search"></span>

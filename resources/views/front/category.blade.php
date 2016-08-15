@@ -7,6 +7,7 @@
     <meta property="fb:pages" content="1450381468590171"/>
     <meta name="alexaVerifyID" content="0Ov3m5G5QodDMKNME8LjDX0N7Bs"/>
     <meta property="og:type" content="website"/>
+    <meta name="theme-color" content="#3B5999">
     <meta property="og:title" content="Latestng.com {{$category[0]->category}} channel"/>
     <meta property="og:site_name" content="LATESTNG.COM"/>
     <meta name="keywords" content="{{$category[0]->tags}}"/>
@@ -36,6 +37,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <![endif]-->
     <script type='text/javascript'>
         (function () {
             var useSSL = 'https:' == document.location.protocol;
@@ -50,16 +52,45 @@
             var leaderboard = googletag.sizeMapping().
                 addSize([1280, 800], [
                     [970, 90],
-                    [728, 90]
+                    [728, 90],
+                    [160, 600],
+                    [120, 600]
+
                 ]).
                 addSize([600, 800], [
-                    [428, 60]
+                    [428, 60],
+                    [160, 600],
+                    [120, 600]
                 ]).
                 addSize([800, 600], [
                     [728, 90],
-                    [468, 60]
+                    [468, 60],
+                    [160, 600],
+                    [120, 600]
                 ]).
                 addSize([0, 0], [
+                    [300, 250],
+                    [240, 400]
+                ]).build();
+            var sidebarad = googletag.sizeMapping().
+                addSize([1280, 800], [
+                    [160, 600],
+                    [120, 600],
+                    [336, 280]
+
+                ]).
+                addSize([600, 800], [
+                    [160, 600],
+                    [120, 600],
+                    [336, 280]
+                ]).
+                addSize([800, 600], [
+                     [160, 600],
+                    [120, 600],
+                    [336, 280]
+                ]).
+                addSize([0, 0], [
+                    [240, 400],
                     [300, 250]
                 ]).build();
             googletag.defineSlot('/32742566/latesng-001', [
@@ -69,16 +100,11 @@
                 [468, 60],
                 [300, 250]
             ], 'div-gpt-ad-1462518072619-0').defineSizeMapping(leaderboard).addService(googletag.pubads());
-            googletag.defineSlot('/32742566/latestng-002', [
-                [970, 90],
-                [728, 90],
-                [320, 50],
-                [468, 60],
-                [300, 250]
-            ], 'div-gpt-ad-1443992445377-1').defineSizeMapping(leaderboard).addService(googletag.pubads());
+            googletag.defineSlot('/32742566/latestng-bottom-leaderboard', [[300, 250], [728, 90], [970, 90], [320, 50], [468, 60]], 'div-gpt-ad-1468910251219-0').defineSizeMapping(leaderboard).addService(googletag.pubads());
+            googletag.defineSlot('/32742566/latestng-003', [[120, 240], [120, 600], [336, 280], [240, 400], [160, 600], [300, 250]], 'div-gpt-ad-1468910906855-0').defineSizeMapping(sidebarad).addService(googletag.pubads());
             googletag.pubads().enableSingleRequest();
-            googletag.pubads().enableAsyncRendering();
             googletag.pubads().collapseEmptyDivs();
+            googletag.pubads().enableSyncRendering();
             googletag.enableServices();
         });
     </script>
@@ -204,7 +230,7 @@
     @endforeach
 
     <div class="load-more">
-        <button type="button" class="btn btn-lg btn-block">Load more</button>
+        {{ $contents->links() }}
     </div>
 
 </div>
@@ -218,7 +244,13 @@
     <div class="row">
         <div class="col-md-12">
             <div class="ad728-wrapper">
-                ADS
+                <div id='div-gpt-ad-1468910906855-0'>
+                    <script type='text/javascript'>
+                        googletag.cmd.push(function () {
+                            googletag.display('div-gpt-ad-1468910906855-0');
+                        });
+                    </script>
+                </div>
             </div>
         </div>
     </div>
@@ -239,7 +271,7 @@
     <h3 class="block-title"><span>Tags</span></h3>
     <ul class="tags-widget">
         @foreach($tags as $tag)
-        <li><a href="/tag/{{$tag}}">{{$tag}}</a></li>
+        <li><a href="/tags/{{$tag}}">{{$tag}}</a></li>
         @endforeach
     </ul>
 </div>
@@ -252,7 +284,7 @@
     <ul>
         @foreach($categories as $categorie)
         <li>
-            <a href="category/{{$categorie->category->category}}">{{$categorie->category->category}} <span class="count">{{$categorie->count}}</span></a>
+            <a href="/category/{{$categorie->category->category}}">{{$categorie->category->category}} <span class="count">{{$categorie->count}}</span></a>
         </li>
         @endforeach
     </ul>
@@ -275,10 +307,10 @@
     <div class="row">
         <div class="col-md-12">
             <div class="ad728-wrapper">
-                <div id='div-gpt-ad-1443992445377-1'>
+                <div id='div-gpt-ad-1468910251219-0'>
                     <script type='text/javascript'>
                         googletag.cmd.push(function () {
-                            googletag.display('div-gpt-ad-1443992445377-1');
+                            googletag.display('div-gpt-ad-1468910251219-0');
                         });
                     </script>
                 </div>

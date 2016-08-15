@@ -68,6 +68,7 @@ Route::group(['domain' => 'autopost.latestng.com'], function () {
 Route::get('/content', 'content_controller@ViewHomePageFeeds');
 Route::get('/', 'content_controller@ViewHomePage');
 Route::get('/new', 'content_controller@ViewHomePage');
+Route::get('/search', 'content_controller@DoSearch');
 Route::get('/test', 'fetch_controller@Test');
 Route::get('/home', 'content_controller@ViewHomePage');
 //Authentication Routes
@@ -257,6 +258,10 @@ Route::post('admin/approve_facebook_user',
 Route::group(['prefix' => 'category'], function () {
 
     Route::get('/{category}', 'content_controller@DisplayCategory');
+});
+Route::group(['prefix' => 'tags'], function () {
+
+    Route::get('/{category}', 'content_controller@DisplayTags');
 });
 Route::get('facebook_login', 'facebook_controller@FacebookLogin');
 Route::get('facebook', 'facebook_controller@FacebookRedirectLogin');

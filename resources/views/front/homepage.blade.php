@@ -12,6 +12,7 @@
     <meta name="keywords"
           content="latest.com, latestng.com,latestng,latest, latest grooves, grooves, news and grooves,Nigeria, Lagos, Abuja, Port Harcourt, breaking news in Nigeria, Boko Haram, PDP, ACN,Buhari, Goodluck Jonathan, Ebola, Quarantine, Shekau, Boko Haram, Chibok, Kunduga, Sambisa, tinubu, nigeria"/>
     <meta property="og:image" content="{{asset('images/logo.png')}}"/>
+    <meta name="theme-color" content="#3B5999">
     <meta property="og:description"
           content="Best aggregator for the best news and entertainments. for news and grooves."/>
     <meta name="author" content="Olumide Omotoso">
@@ -52,6 +53,7 @@
                 addSize([1280, 800], [
                     [970, 90],
                     [728, 90]
+
                 ]).
                 addSize([600, 800], [
                     [428, 60]
@@ -59,9 +61,32 @@
                 addSize([800, 600], [
                     [728, 90],
                     [468, 60]
+                    ]).
+                addSize([0, 0], [
+                    [300, 250],
+                    [240, 400]
+                ]).build();
+            var sidebarad = googletag.sizeMapping().
+                addSize([1280, 800], [
+                    [160, 600],
+                    [120, 600],
+                    [336, 280]
+
+                ]).
+                addSize([600, 800], [
+                    [160, 600],
+                    [120, 600],
+                    [336, 280]
+                ]).
+                addSize([800, 600], [
+                    [160, 600],
+                    [120, 600],
+                    [336, 280]
                 ]).
                 addSize([0, 0], [
+                    [240, 400],
                     [300, 250]
+
                 ]).build();
             googletag.defineSlot('/32742566/latesng-001', [
                 [970, 90],
@@ -70,27 +95,12 @@
                 [468, 60],
                 [300, 250]
             ], 'div-gpt-ad-1462518072619-0').defineSizeMapping(leaderboard).addService(googletag.pubads());
-
-            googletag.defineSlot('/32742566/latestng-002', [
-                [336, 280]
-            ], 'div-gpt-ad-1443992445377-1').defineSizeMapping(leaderboard).addService(googletag.pubads());
-            googletag.defineSlot('/32742566/latestng-003', [
-                [336, 280]
-            ], 'div-gpt-ad-1443992445377-2').defineSizeMapping(leaderboard).addService(googletag.pubads());
-            googletag.defineSlot('/32742566/latestng-004', [
-                [336, 280]
-            ], 'div-gpt-ad-1443992445377-3').defineSizeMapping(leaderboard).addService(googletag.pubads());
+            googletag.defineSlot('/32742566/latestng-bottom-leaderboard', [[300, 250], [728, 90], [970, 90], [320, 50], [468, 60]], 'div-gpt-ad-1468910251219-0').defineSizeMapping(leaderboard).addService(googletag.pubads());
+            googletag.defineSlot('/32742566/latestng-003', [[120, 240], [120, 600], [240, 400],[336, 280], [160, 600], [300, 250]], 'div-gpt-ad-1468910906855-0').defineSizeMapping(sidebarad).addService(googletag.pubads());
             googletag.pubads().enableSingleRequest();
-            googletag.pubads().enableAsyncRendering();
             googletag.pubads().collapseEmptyDivs();
+            googletag.pubads().enableSyncRendering();
             googletag.enableServices();
-        });
-    </script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-9946990192994306",
-            enable_page_level_ads: true
         });
     </script>
 </head>
@@ -148,7 +158,8 @@ function human_time_diff($from)
                                                           data-toggle="tab">Latest</a></li>
                 <li role="presentation"><a href="#popular" aria-controls="popular" role="tab"
                                            data-toggle="tab">Popular</a></li>
-                <li role="presentation"><a href="#trending" aria-controls="trending" role="tab" data-toggle="tab">Trending</a>
+                <li role="presentation"><a href="#trending" aria-controls="trending" role="tab"
+                                           data-toggle="tab">Rising</a>
                 </li>
             </ul>
 
@@ -190,7 +201,7 @@ function human_time_diff($from)
                         @endforeach
 
                         <div class="load-more">
-                            <button type="button" class="btn btn-block">Load more</button>
+                            {{ $latest->links() }}
                         </div>
                     </div>
                 </div>
@@ -233,7 +244,7 @@ function human_time_diff($from)
                         @endforeach
 
                         <div class="load-more">
-                            <button type="button" class="btn btn-block">Load more</button>
+                            {{ $popular->links() }}
                         </div>
 
                     </div>
@@ -273,317 +284,146 @@ function human_time_diff($from)
                         </article>
                         @endif
                         @endforeach
+                        <!-- /32742566/latestng-003 -->
+
 
                         <div class="load-more">
-                            <button type="button" class="btn btn-block">Load more</button>
+                            {{ $trending->links() }}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="visible-xs" id="sticky-sidebar">
-    <div class="sticky-sidebar-wrapper">
-
-        <div class="widget tab-widget sticky-content">
-            <ul class="nav nav-tabs" role="tablist" id="widget-tab">
-                <li role="presentation" class="active"><a href="#latest" aria-controls="latest" role="tab"
-                                                          data-toggle="tab">Latest</a></li>
-                <li role="presentation"><a href="#popular" aria-controls="popular" role="tab"
-                                           data-toggle="tab">Popular</a></li>
-                <li role="presentation"><a href="#trending" aria-controls="trending" role="tab" data-toggle="tab">Trending</a>
-                </li>
-            </ul>
-
-            <div class="tab-content">
-
-                <div role="tabpanel" class="tab-pane active animated fadeIn" id="latest">
-                    <div class="sticky-scroll">
-                        @foreach($latest as $lat)
-                        @if($lat->image_url == null)
-                        <article class="widget-post clearfix">
-                            <header>
-                                <h3>
-                                    <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
-                                </h3>
-
-                                <p class="simple-share">
-                                    <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
-                                </p>
-                            </header>
-                        </article>
-                        @else
-                        <article class="widget-post clearfix">
-                            <div class="simple-thumb">
-                                <a href="/{{$lat->id}}/{{$lat->perm_url}}">
-                                    <img src="{{$lat->image_url}}" alt="">
-                                </a>
-                            </div>
-                            <header>
-                                <h3>
-                                    <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
-                                </h3>
-
-                                <p class="simple-share">
-                                    <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
-                                </p>
-                            </header>
-                        </article>
-                        @endif
-                        @endforeach
-
-                        <div class="load-more">
-                            <button type="button" class="btn btn-block">Load more</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Recent Posts -->
-
-                <div role="tabpanel" class="tab-pane animated fadeIn" id="popular">
-
-                    <div class="sticky-scroll">
-                        @foreach($popular as $lat)
-                        @if($lat->image_url == null)
-                        <article class="widget-post clearfix">
-                            <header>
-                                <h3>
-                                    <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
-                                </h3>
-
-                                <p class="simple-share">
-                                    <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
-                                </p>
-                            </header>
-                        </article>
-                        @else
-                        <article class="widget-post clearfix">
-                            <div class="simple-thumb">
-                                <a href="/{{$lat->id}}/{{$lat->perm_url}}">
-                                    <img src="{{$lat->image_url}}" alt="">
-                                </a>
-                            </div>
-                            <header>
-                                <h3>
-                                    <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
-                                </h3>
-
-                                <p class="simple-share">
-                                    <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
-                                </p>
-                            </header>
-                        </article>
-                        @endif
-                        @endforeach
-
-                        <div class="load-more">
-                            <button type="button" class="btn btn-block">Load more</button>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div role="tabpanel" class="tab-pane animated fadeIn" id="trending">
-                    <div class="sticky-scroll">
-                        @foreach($trending as $lat)
-                        @if($lat->image_url == null)
-                        <article class="widget-post clearfix">
-                            <header>
-                                <h3>
-                                    <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
-                                </h3>
-
-                                <p class="simple-share">
-                                    <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
-                                </p>
-                            </header>
-                        </article>
-                        @else
-                        <article class="widget-post clearfix">
-                            <div class="simple-thumb">
-                                <a href="/{{$lat->id}}/{{$lat->perm_url}}">
-                                    <img src="{{$lat->image_url}}" alt="">
-                                </a>
-                            </div>
-                            <header>
-                                <h3>
-                                    <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
-                                </h3>
-
-                                <p class="simple-share">
-                                    <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
-                                </p>
-                            </header>
-                        </article>
-                        @endif
-                        @endforeach
-
-                        <div class="load-more">
-                            <button type="button" class="btn btn-block">Load more</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="widget adwidget">
+            <div id='div-gpt-ad-1468910906855-0'>
+                <script type='text/javascript'>
+                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1468910906855-0'); });
+                </script>
             </div>
         </div>
     </div>
 </div>
 <div class="fixed-main">
-<div class="fixed-main-wrapper main-wrapper">
-
-    <!-- End Main Banner -->
-    <div id='div-gpt-ad-1462518072619-0' class="adv-widget center-block">
-        <script type='text/javascript'>
-            googletag.cmd.push(function () {
-                googletag.display('div-gpt-ad-1462518072619-0');
-            });
-        </script>
-    </div>
-    <!-- End Main Banner -->
-    <div class="main-content mag-content clearfix">
-
-        <div class="row blog-content">
-            <div class="col-md-12">
-                <div class="flexslider slider-one">
-                    <div class="featured-slider">
-
-                        <div class="slider-item">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <article class="featured-big box-news box-big">
-                                        <a href="{{$entertainments[0]->newsfeed->id}}/{{$entertainments[0]->newsfeed->perm_url}}">
-                                            <img src="{{$entertainments[0]->newsfeed->image_url}}" alt="">
-                                        </a>
-                                        <header class="featured-header">
-                                            <a class="category bgcolor3" href="{{url('/category/entertainment')}}">Entertainment</a>
-
-                                            <h2><a href="{{$entertainments[0]->newsfeed->id}}/{{$entertainments[0]->newsfeed->perm_url}}">{{$entertainments[0]->newsfeed->feed_title}}</a></h2>
-
-                                            <p class="simple-share">
-                                                by <a href="#"><b>Olumide Omotoso</b></a> -
-                                                <span class="article-date">{{human_time_diff($entertainments[0]->newsfeed->created_at)}}</span>
-                                            </p>
-                                        </header>
-                                    </article>
-                                </div>
-                            </div>
+    <div class="fixed-main-wrapper main-wrapper">
+        <div class="mag-content clearfix">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ad728-wrapper">
+                        <div id='div-gpt-ad-1462518072619-0'>
+                            <script type='text/javascript'>
+                                googletag.cmd.push(function () {
+                                    googletag.display('div-gpt-ad-1462518072619-0');
+                                });
+                            </script>
                         </div>
-                        <!-- .slider-item -->
-
-                        <div class="slider-item">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <article class="featured-big box-news box-big">
-                                        <a href="{{$business[0]->newsfeed->id}}/{{$business[0]->newsfeed->perm_url}}">
-                                            <img src="{{$business[0]->newsfeed->image_url}}" alt="">
-                                        </a>
-                                        <header class="featured-header">
-                                            <a class="category bgcolor2"
-                                               href="{{url('/category/business')}}">Business</a>
-
-                                            <h2><a href="#">{{$business[0]->newsfeed->feed_title}}</a></h2>
-
-                                            <p class="simple-share">
-                                                by <a href="#"><b>Olumide Omotoso</b></a> -
-                                                <span class="article-date">{{human_time_diff($business[0]->newsfeed->created_at)}}</span>
-                                            </p>
-                                        </header>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .slider-item -->
-
-                        <div class="slider-item">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <article class="featured-big box-news box-big">
-                                        <a href="{{$health[0]->newsfeed->id}}/{{$health[0]->newsfeed->perm_url}}">
-                                            <img src="{{$health[0]->newsfeed->image_url}}" alt="">
-                                        </a>
-                                        <header class="featured-header">
-                                            <a class="category bgcolor3" href="{{url('/category/health')}}">Health and
-                                                Wellness</a>
-
-                                            <h2><a href="{{$health[0]->newsfeed->id}}/{{$health[0]->newsfeed->perm_url}}">{{$health[0]->newsfeed->feed_title}}</a></h2>
-
-                                            <p class="simple-share">
-                                                by <a href="#"><b>Olumide Omotoso</b></a> -
-                                                <span class="article-date">{{human_time_diff($health[0]->newsfeed->created_at)}}</span>
-                                            </p>
-                                        </header>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .slider-item -->
-
-                    </div>
-                    <!-- .featured-slider -->
-                </div>
-                <!-- .flexslider .slider-one -->          </div>
-        </div>
-
-        <div class="row">
-            @foreach($categories as $category)
-
-            <div class="col-md-6">
-                <article class="news-block small-block">
-                    <a href="{{$category[0]->newsfeed->id}}/{{$category[0]->newsfeed->perm_url}}" class="overlay-link">
-                        <figure class="image-overlay">
-                            <img src="{{$category[0]->newsfeed->image_url}}" alt="">
-                        </figure>
-                    </a>
-                    <a href="/category/{{$category[0]->category->category}}" class="category">
-                        {{$category[0]->category->category}}
-                    </a>
-                    <header class="news-details">
-                        <h3 class="news-title">
-                            <a href="{{$category[0]->newsfeed->id}}/{{$category[0]->newsfeed->perm_url}}">
-                                {{$category[0]->newsfeed->feed_title}}
-                            </a>
-                        </h3>
-
-                        <p class="simple-share">
-                            @if(count($category[0]->newsfeed->editor) >0)
-                            by <a href="#"><b>{{$category[0]->newsfeed->editor->username}}</b></a>@endif -
-                            <span class="article-date"><i class="fa fa-clock-o"></i> {{human_time_diff($category[0]->newsfeed->created_at)}}</span>
-                        </p>
-                    </header>
-                </article>
-                <!-- News block -->
-            </div>
-
-            @endforeach
-
-        </div>
-
-
-    </div>
-    <!-- .main-content -->
-
-    <!-- End Main Banner -->
-    <div class="mag-content clearfix">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="ad728-wrapper">
-                    <div id='div-gpt-ad-1462518072619-1' class="adv-widget center-block">
-                        <script type='text/javascript'>
-                            googletag.cmd.push(function () {
-                                googletag.display('div-gpt-ad-1462518072619-1');
-                            });
-                        </script>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End Main Banner -->
+
+        <!-- End Main Banner -->
+        <div class="main-content mag-content clearfix">
+
+            <div class="row blog-content">
+                <div class="col-md-12">
+                    <div class="flexslider slider-one">
+                        <div class="featured-slider">
+
+                            <div class="slider-item">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <article class="featured-big box-news box-big">
+                                            <a href="{{$entertainments[0]->newsfeed->id}}/{{$entertainments[0]->newsfeed->perm_url}}">
+                                                <img src="{{$entertainments[0]->newsfeed->image_url}}" alt="">
+                                            </a>
+                                            <header class="featured-header">
+                                                <a class="category bgcolor3" href="{{url('/category/entertainment')}}">Entertainment</a>
+
+                                                <h2>
+                                                    <a href="{{$entertainments[0]->newsfeed->id}}/{{$entertainments[0]->newsfeed->perm_url}}">{{$entertainments[0]->newsfeed->feed_title}}</a>
+                                                </h2>
+
+                                                <p class="simple-share">
+                                                    by <a href="#"><b>Olumide Omotoso</b></a> -
+                                                    <span class="article-date">{{human_time_diff($entertainments[0]->newsfeed->created_at)}}</span>
+                                                </p>
+                                            </header>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- .slider-item -->
+
+
+                            <!-- .slider-item -->
+
+                        </div>
+                        <!-- .featured-slider -->
+                    </div>
+                    <!-- .flexslider .slider-one -->          </div>
+            </div>
+
+            <div class="row">
+                @foreach($categories as $category)
+
+                <div class="col-md-6">
+                    <article class="news-block small-block">
+                        <a href="{{$category[0]->newsfeed->id}}/{{$category[0]->newsfeed->perm_url}}"
+                           class="overlay-link">
+                            <figure class="image-overlay">
+                                <img src="{{$category[0]->newsfeed->image_url}}" alt="">
+                            </figure>
+                        </a>
+                        <a href="/category/{{$category[0]->category->category}}" class="category">
+                            {{$category[0]->category->category}}
+                        </a>
+                        <header class="news-details">
+                            <h3 class="news-title">
+                                <a href="{{$category[0]->newsfeed->id}}/{{$category[0]->newsfeed->perm_url}}">
+                                    {{$category[0]->newsfeed->feed_title}}
+                                </a>
+                            </h3>
+
+                            <p class="simple-share">
+                                @if(count($category[0]->newsfeed->editor) >0)
+                                by <a href="#"><b>{{$category[0]->newsfeed->editor->username}}</b></a>@endif -
+                                <span class="article-date"><i class="fa fa-clock-o"></i> {{human_time_diff($category[0]->newsfeed->created_at)}}</span>
+                            </p>
+                        </header>
+                    </article>
+                    <!-- News block -->
+                </div>
+
+                @endforeach
+
+            </div>
+
+
+        </div>
+        <!-- .main-content -->
+
+        <!-- End Main Banner -->
+        <div class="mag-content clearfix">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ad728-wrapper">
+                        <div id='div-gpt-ad-1468910251219-0'>
+                            <script type='text/javascript'>
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1468910251219-0'); });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Main Banner -->
     </div>
-    <!-- End Main Banner -->
-</div>
-<!-- .main-wrapper -->
+    <!-- .main-wrapper -->
 
-<!-- Footer -->
+    <!-- Footer -->
 
-<!-- End Footer -->
+    <!-- End Footer -->
 
 </div>
 <!-- .fixed-main -->
