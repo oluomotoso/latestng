@@ -162,6 +162,14 @@ Route::get('admin/manage_pending_post',
     ['middleware' => 'auth',
         'uses' => 'DatatablesController@GetIndex']
 );
+Route::get('admin/manage_facebook_accounts',
+    ['middleware' => 'auth',
+        'uses' => 'admin_controller@GetFacebookAccounts']
+);
+Route::post('admin/manage_facebook_accounts',
+    ['middleware' => 'auth',
+        'uses' => 'admin_controller@ManageFacebookAccounts']
+);
 Route::get('admin/manage-sources',
     ['middleware' => 'auth',
         'uses' => 'admin_controller@ContentSource']
