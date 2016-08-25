@@ -41,11 +41,6 @@ class content_controller extends Controller
                     $query->orderBy('tag', 'desc');
                 }, 'editor'])->find($id);
 
-            if (isset($_GET['p'])) {
-                $page = $_GET['p'];
-                header("Location: http://old.latestng.com?p=$page");
-                exit;
-            }
             if ($content == null) {
                 abort(404);
             }

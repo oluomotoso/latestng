@@ -273,12 +273,7 @@ Route::group(['prefix' => 'tags'], function () {
 });
 Route::get('facebook_login', 'facebook_controller@FacebookLogin');
 Route::get('facebook', 'facebook_controller@FacebookRedirectLogin');
-Route::get('/{id}/{title?}', 'content_controller@DisplayFullNewsContent')->name('articles.show');
-Route::post('{id}/comments', 'content_controller@PostComment')->name('articles.comment');
-Route::post('comments/{id}/reply', 'content_controller@PostCommentReply')->name('comments.reply');
-Route::get('us/{id}/{title?}', 'content_controller@DisplayFullNewsContent');
-Route::get('ng/{id}/{title?}', 'content_controller@DisplayFullNewsContent');
-Route::get('feeds.php', 'content_controller@RedirectOldestRoute');
+Route::get('/{id}/{title?}', 'content_controller@DisplayFullNewsContent');
 
 
 
