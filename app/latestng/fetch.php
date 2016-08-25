@@ -35,6 +35,9 @@ class fetch
     public function FetchPosts()
     {
         ini_set('max_execution_time', 1300);
+        if (date('H') > 21 && date('H') < 5) {
+            exit();
+        }
         try {
             $reader = new Reader;
             $sources = content_source::where('status', 1)->get();
