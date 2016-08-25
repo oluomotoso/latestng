@@ -303,6 +303,7 @@ function human_time_diff($from)
         </div>
     </div>
 </div>
+
 <div class="fixed-main">
     <div class="fixed-main-wrapper main-wrapper">
         <div class="mag-content clearfix">
@@ -321,9 +322,152 @@ function human_time_diff($from)
             </div>
         </div>
         <!-- End Main Banner -->
+        <div class="row blog-content visible-xs">
+            <div class="col-md-12">
+        <div class="widget tab-widget sticky-content">
+            <ul class="nav nav-tabs" role="tablist" id="widget-tab">
+                <li role="presentation" class="active"><a href="#latest" aria-controls="latest" role="tab"
+                                                          data-toggle="tab">Latest</a></li>
+                <li role="presentation"><a href="#popular" aria-controls="popular" role="tab"
+                                           data-toggle="tab">Popular</a></li>
+                <li role="presentation"><a href="#trending" aria-controls="trending" role="tab"
+                                           data-toggle="tab">Rising</a>
+                </li>
+            </ul>
 
+            <div class="tab-content">
+
+                <div role="tabpanel" class="tab-pane active animated fadeIn" id="latest">
+                    <div class="sticky-scroll">
+                        @foreach($latest as $lat)
+                            @if($lat->image_url == null)
+                                <article class="widget-post clearfix">
+                                    <header>
+                                        <h3>
+                                            <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
+                                        </h3>
+
+                                        <p class="simple-share">
+                                            <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
+                                        </p>
+                                    </header>
+                                </article>
+                            @else
+                                <article class="widget-post clearfix">
+                                    <div class="simple-thumb">
+                                        <a href="#">
+                                            <img src="{{$lat->image_url}}" alt="">
+                                        </a>
+                                    </div>
+                                    <header>
+                                        <h3>
+                                            <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
+                                        </h3>
+
+                                        <p class="simple-share">
+                                            <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
+                                        </p>
+                                    </header>
+                                </article>
+                            @endif
+                        @endforeach
+
+                        <div class="load-more">
+                            {{ $latest->links() }}
+                        </div>
+                    </div>
+                </div>
+                <!-- Recent Posts -->
+
+                <div role="tabpanel" class="tab-pane animated fadeIn" id="popular">
+
+                    <div class="sticky-scroll">
+                        @foreach($popular as $lat)
+                            @if($lat->image_url == null)
+                                <article class="widget-post clearfix">
+                                    <header>
+                                        <h3>
+                                            <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
+                                        </h3>
+
+                                        <p class="simple-share">
+                                            <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
+                                        </p>
+                                    </header>
+                                </article>
+                            @else
+                                <article class="widget-post clearfix">
+                                    <div class="simple-thumb">
+                                        <a href="#">
+                                            <img src="{{$lat->image_url}}" alt="">
+                                        </a>
+                                    </div>
+                                    <header>
+                                        <h3>
+                                            <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
+                                        </h3>
+
+                                        <p class="simple-share">
+                                            <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
+                                        </p>
+                                    </header>
+                                </article>
+                            @endif
+                        @endforeach
+
+                        <div class="load-more">
+                            {{ $popular->links() }}
+                        </div>
+
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane animated fadeIn" id="trending">
+                    <div class="sticky-scroll">
+                        @foreach($trending as $lat)
+                            @if($lat->image_url == null)
+                                <article class="widget-post clearfix">
+                                    <header>
+                                        <h3>
+                                            <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
+                                        </h3>
+
+                                        <p class="simple-share">
+                                            <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
+                                        </p>
+                                    </header>
+                                </article>
+                            @else
+                                <article class="widget-post clearfix">
+                                    <div class="simple-thumb">
+                                        <a href="#">
+                                            <img src="{{$lat->image_url}}" alt="">
+                                        </a>
+                                    </div>
+                                    <header>
+                                        <h3>
+                                            <a href="/{{$lat->id}}/{{$lat->perm_url}}">{{$lat->feed_title}}</a>
+                                        </h3>
+
+                                        <p class="simple-share">
+                                            <span><i class="fa fa-clock-o"></i> {{human_time_diff($lat->created_at)}}</span>
+                                        </p>
+                                    </header>
+                                </article>
+                        @endif
+                    @endforeach
+                    <!-- /32742566/latestng-003 -->
+
+
+                        <div class="load-more">
+                            {{ $trending->links() }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></div></div>
         <!-- End Main Banner -->
-        <div class="main-content mag-content clearfix">
+        <div class="main-content mag-content clearfix visible-lg visible-md visible-sm">
 
             <div class="row blog-content">
                 <div class="col-md-12">
