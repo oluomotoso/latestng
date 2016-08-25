@@ -324,7 +324,7 @@ function human_time_diff($from)
         <!-- End Main Banner -->
         <div class="row blog-content visible-xs">
             <div class="col-md-12">
-        <div class="widget tab-widget sticky-content">
+        <div class="widget tab-widgett">
             <ul class="nav nav-tabs" role="tablist" id="widget-tab">
                 <li role="presentation" class="active"><a href="#latest" aria-controls="latest" role="tab"
                                                           data-toggle="tab">Latest</a></li>
@@ -338,7 +338,7 @@ function human_time_diff($from)
             <div class="tab-content">
 
                 <div role="tabpanel" class="tab-pane active animated fadeIn" id="latest">
-                    <div class="sticky-scroll">
+                    <div>
                         @foreach($latest as $lat)
                             @if($lat->image_url == null)
                                 <article class="widget-post clearfix">
@@ -381,7 +381,7 @@ function human_time_diff($from)
 
                 <div role="tabpanel" class="tab-pane animated fadeIn" id="popular">
 
-                    <div class="sticky-scroll">
+                    <div>
                         @foreach($popular as $lat)
                             @if($lat->image_url == null)
                                 <article class="widget-post clearfix">
@@ -423,7 +423,7 @@ function human_time_diff($from)
                 </div>
 
                 <div role="tabpanel" class="tab-pane animated fadeIn" id="trending">
-                    <div class="sticky-scroll">
+                    <div>
                         @foreach($trending as $lat)
                             @if($lat->image_url == null)
                                 <article class="widget-post clearfix">

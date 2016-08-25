@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e6fcafc0-499b-426d-8049-ae867e69159f" name="Latestng.com" url="http://178.62.195.177">
+        <fileTransfer host="178.62.195.177" port="22" privateKey="A:\FEMTOSH\Server\private.ppk" rootFolder="/var/www/latestng.com" accessType="SFTP" username="oluomotoso" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

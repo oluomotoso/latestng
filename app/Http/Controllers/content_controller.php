@@ -1,7 +1,6 @@
 <?php
 
 
-
 namespace newsbook\Http\Controllers;
 
 use DB;
@@ -9,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use League\Flysystem\Exception;
 use newsbook\content_categories;
+use newsbook\facebook_edge;
 use newsbook\FeedCategory;
 use newsbook\Http\Requests;
 use newsbook\news_feed;
@@ -38,8 +38,8 @@ class content_controller extends Controller
             $request = new Request();
             DB::table('news_feed')->where('id', $id)->increment('read_counter');
             $content = news_feed::with(['feed_category.Category', 'tagged.tags' => function ($query) {
-                    $query->orderBy('tag', 'desc');
-                }, 'editor'])->find($id);
+                $query->orderBy('tag', 'desc');
+            }, 'editor'])->find($id);
 
             if ($content == null) {
                 abort(404);
@@ -274,7 +274,7 @@ class content_controller extends Controller
 
     public function FeaturedFeeds()
     {
-        return news_feed::where('publish_status', 1)->orderBy('read_counter', 'desc')->simplePaginate(5);
+        return news_feed::where('publish_status', 1)->orderBy('read_counter', 'desc')->simplePaginate(10);
     }
 
     public function DoSearch()
@@ -290,12 +290,12 @@ class content_controller extends Controller
     public function RisingFeeds()
     {
         $today = new \DateTime();
-        return news_feed::where('publish_status', 1)->where('created_at', '>', $today->modify('-2 days'))->orderBy('read_counter', 'desc')->simplePaginate(5);
+        return news_feed::where('publish_status', 1)->where('created_at', '>', $today->modify('-2 days'))->orderBy('read_counter', 'desc')->simplePaginate(10);
     }
 
     public function Latest()
     {
-        return news_feed::where('publish_status', 1)->orderBy('id', 'desc')->simplePaginate(5);
+        return news_feed::where('publish_status', 1)->orderBy('id', 'desc')->simplePaginate(10);
 
     }
 
