@@ -434,7 +434,11 @@ class admin_controller extends Controller
         return Redirect('admin/check_edge_response')->with(['message' => 'Edited Successfully']);
 
     }
-
+    public function DeleteFacebookEdge(Request $request)
+    {
+        facebook_edge::where('id', $request->edge_id)->delete();
+        return redirect('admin/check_edge_response')->with('message', 'edge deleted successfully');
+    }
     public function GetFacebookAccounts()
     {
         $facebook = facebook_account::all();

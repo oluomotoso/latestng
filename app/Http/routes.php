@@ -156,6 +156,9 @@ Route::get('admin/edit_html',
 Route::post('admin/create_facebook_edge',
     ['middleware' => 'auth',
         'uses' => 'admin_controller@PostFacebookEdge']);
+Route::post('admin/delete_edge',
+    ['middleware' => 'auth',
+        'uses' => 'admin_controller@DeleteFacebookEdge']);
 
 //Manage Pending Post
 Route::get('admin/manage_pending_post',

@@ -78,6 +78,12 @@ class DatatablesController extends Controller
         <input name="account" type="hidden" value="'.$owner->id.'">
 
 <button class="btn btn-default" type="submit">Status</button>
+    </form><form action="delete_edge" method="post">
+
+        <input name="_token" type="hidden" value="'.csrf_token().'">
+        <input name="edge_id" type="hidden" value="'.$edge->id.'">
+
+<button class="btn btn-danger" type="submit">Delete</button>
     </form>';
         })->make(true);
     }
