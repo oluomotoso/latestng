@@ -435,6 +435,36 @@ class admin_controller extends Controller
 
     }
 
+    public function GetFacebookAccounts()
+    {
+        $facebook = facebook_account::all();
+        return view('admin.facebook_accounts', ['accounts' => $facebook]);
+    }
+
+    public function ManageFacebookAccounts(Request $request)
+    {
+        try {
+            if (isset($request->approve)) {
+                facebook_account::where('id', $request->account_id)->update([
+                    'availability' => 1
+                ]);
+            } elseif (isset($request->disable)) {
+                facebook_account::where('id', $request->account_id)->update([
+                    'availability' => 0
+                ]);
+            } elseif (isset($request->delete)) {
+                facebook_edge::where('facebook_account_owner', $request->account_id)->update([
+                    'facebook_account_owner' => 5
+                ]);
+                facebook_account::where('id', $request->account_id)->delete();
+
+            }
+            return redirect($request->path())->with('operation performed successfully');
+        } catch (\Exception $e) {
+            return redirect($request->path())->withErrors($e->getMessage());
+        }
+    }
+
     public function PostFacebookEdge(Request $request)
     {
         try {

@@ -52,6 +52,8 @@
                     <li><a href="{{url('admin/create_category')}}"><i class="glyphicon glyphicon-arrow-right"></i> Create Category</a></li>
                     <li><a href="{{url('admin/check_edge_response')}}"><i class="glyphicon glyphicon-arrow-right"></i>Manage Facebook Edge</a></li>
                     <li><a href="{{url('admin/manage-sources')}}"><i class="glyphicon glyphicon-arrow-right"></i>Manage Sources</a></li>
+                    <li><a href="{{url('admin/manage_facebook_accounts')}}"><i class="glyphicon glyphicon-arrow-right"></i>Manage Facebook Accounts</a></li>
+
                     <h4>User Management</h4>
                     <li class="nav-divider"></li>
                     <li><a href="{{('admin/add_user')}}"><i class="glyphicon glyphicon-list-alt"></i> Add User</a>
