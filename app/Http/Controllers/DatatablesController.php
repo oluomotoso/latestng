@@ -67,24 +67,5 @@ class DatatablesController extends Controller
             })->make(true);
     }
 
-    public function CheckEdgeResponseData()
-    {
-        $pending = facebook_edge::select('id', 'name', 'facebook_id', 'facebook_account_owner', 'response', 'updated_at');
-        return Datatables::of($pending)->addColumn('account_name', function (facebook_edge $edge) {
-            $owner = facebook_account::find($edge->facebook_account_owner);
-            return $owner->name . '<a href="/admin/edit_facebook_edge/' . $edge->id . '" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Manage</a><form action="approve_facebook_user" method="post">
 
-        <input name="_token" type="hidden" value="'.csrf_token().'">
-        <input name="account" type="hidden" value="'.$owner->id.'">
-
-<button class="btn btn-default" type="submit">Status</button>
-    </form><form action="delete_edge" method="post">
-
-        <input name="_token" type="hidden" value="'.csrf_token().'">
-        <input name="edge_id" type="hidden" value="'.$edge->id.'">
-
-<button class="btn btn-danger" type="submit">Delete</button>
-    </form>';
-        })->make(true);
-    }
 }

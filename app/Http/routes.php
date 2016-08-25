@@ -204,7 +204,7 @@ Route::get('admin/published_data',
 );
 Route::get('admin/check_edge_response',
     ['middleware' => 'auth',
-        'uses' => 'DatatablesController@GetResponseInfo']
+        'uses' => 'admin_controller@CheckEdgeResponseData']
 );
 /*Route::post('admin/create_post',
     ['middleware' => 'auth',
