@@ -138,9 +138,9 @@ class LatestngFacebook
                 $pagesEdge = $data;
                 //$Edge=$this->UpdateGroupInformation();
                 do {
-                    echo($user->name).',';
+                    echo ($user->name) . ',';
                     foreach ($pagesEdge as $group) {
-                        echo($user->name).',';
+                        echo ($user->name) . ',';
                         echo($group['id'] . ',');
                         echo($group['name'] . ',');
                         echo('|');
@@ -263,6 +263,9 @@ class LatestngFacebook
 
     function PostToFacebookPages()
     {
+        if (date('H') > 21 && date('H') < 5) {
+            exit();
+        }
         session_start();
         $to_post = news_feed::where('publish_status', 1)->where('facebook', 0)->take(1)->get();
         if ($to_post == null) {
@@ -271,7 +274,7 @@ class LatestngFacebook
         } else {
             $to_post_content = $to_post[0];
             $linkData = [
-                'message' => $to_post_content->feed_description,
+                'message' => htmlspecialchars_decode($to_post_content->feed_description),
                 'link' => 'http://www.latestng.com/' . $to_post_content->id . '/' . $to_post_content->perm_url . ''
 
             ];
@@ -348,21 +351,23 @@ class LatestngFacebook
         if ($posted >= 14) {
             return 'posts have exceeded the maximum ' . $posted . '';
         }
-        $post = news_feed::where('fb_group', 0)->where('metrics', '>=', 15)->where('created_at', '>=', Carbon::now()->subHours(24))->orderBy('created_at', 'desc')->limit(1)->get();
+        if (date('H') > 21 && date('H') < 5) {
+            exit();
+        }
+        $post = news_feed::where('fb_group', 0)->where('created_at', '>=', Carbon::now()->subHours(24))->orderBy('created_at', 'desc')->limit(1)->get();
         if (count($post) == 0) {
             return 'No post to post';
         }
         $LinkId = explode('_', $post[0]->fb_id);
         $LinkId = $LinkId[1];
         $linkData = [
-            'message' => $post[0]->feed_description,
             'link' => 'http://www.latestng.com/' . $post[0]->id . '/' . $post[0]->perm_url . ''
 
         ];
         /* 'link' => 'https://www.facebook.com/latestng/posts/' . $LinkId . ''*/
         $accounts = facebook_account::with(['edge' => function ($query) {
-                $query->where('edge_type', 'group');
-            }])->where('availability', 1)->get();
+            $query->where('edge_type', 'group');
+        }])->where('availability', 1)->get();
         //echo($accounts);
         DB::table('news_feed')->where('id', $post[0]->id)->increment('fb_group');
         foreach ($accounts as $account) {
